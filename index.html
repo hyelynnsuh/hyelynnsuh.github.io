@@ -5,20 +5,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="stylesheets/reset.css" rel="stylesheet">
 		<link href="stylesheets/common.css" rel="stylesheet">
+		<link href="stylesheets/style.css" rel="stylesheet">
+
+		<!-- FONTS -->
+		<link rel="preload" href="assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
 	</head>
-	<body>
+	<body class="neue">
 		<header>
 			<a>*</a>
-			<nav>
-				<a>work</a>
-				<a>library</a>
-				<a>about</a>
+			<input class="side-menu" type="checkbox" id="side-menu">
+			<label class="hamb" for="side-menu">
+				<span class="hamb-line"></span>
+			</label>
+			<nav class="nav">
+				<ul class="menu">
+					<li>
+						<a>work</a>
+					</li>
+					<li>
+						<a>library</a>
+					</li>
+					<li>
+						<a>about</a>
+					</li>
+				</ul>
 			</nav>
 		</header>
 
 		<main>
 			<section id="intro">
-				<p>hye lynn suh</p>
+				<p class="name-subtext left-def">portfolio</p>
+				<p class="name">hye lynn suh</p>
+				<p class="name-subtext right-def">product designer based in nyc</p>
 			</section>
 			<section id="product-design">
 				<ul>

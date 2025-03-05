@@ -1,0 +1,25 @@
+/* INDEX.HTML */
+/* HERO NAME */
+.name {
+	font-size: calc(var(--font-size)*4);
+	font-weight: 600;
+	text-align: center;
+}
+
+.name-subtext {
+	font-weight: 600;
+}
+
+#intro {
+	display: grid;
+	grid-template-rows: 1fr 3fr 1fr;
+}
+
+.left-def {
+	margin-left: var(--margin);
+}
+
+.right-def {
+	margin-right: var(--margin);
+	justify-self: end;
+}
