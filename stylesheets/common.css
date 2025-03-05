@@ -142,3 +142,33 @@ ul {
 	transform: rotate(45deg);
 	top: 0;
 }
+
+
+/* FOOTER */
+footer {
+	background-color: var(--black);
+	margin-top: calc(var(--margin)*2);
+}
+
+.footer-info {
+	color: var(--white);
+	font-weight: 500;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding: var(--padding);
+}
+
+.socials {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.credits {
+	justify-self: center;
+	align-self: center;
+}
+

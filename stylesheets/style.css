@@ -92,11 +92,14 @@
 	font-weight: 600;
 	border: solid 1px var(--black);
 	border-radius: var(--border-radius);
-	text-align: left;
+	text-align: center;
 	padding: calc(var(--padding)/1.8);
-	width: fit-content;
 	margin-left: var(--margin);
+	margin-right: var(--margin);
 	margin-top: calc(var(--margin)*1.5);
+	background-color: var(--black);
+	color: var(--white);
+
 }
 
 .project {
@@ -141,6 +144,8 @@
 	display: flex;
 	gap: 0.5rem;
 }
+
+
 
 
 
