@@ -105,7 +105,7 @@
 }
 
 /* GOAL */
-#bg, #goal, .side-bar {
+section {
 	padding: var(--padding);
 	margin-top: var(--margin);
 }
@@ -115,6 +115,7 @@
 	font-weight: 550;
 	color: var(--black);
 	text-align: center;
+	/* potentially consider putting print marks around it */
 }
 
 .goal-bold {
@@ -130,10 +131,37 @@
 }
 
 
+/* ALL CONTENT */
+.main-content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.content-flex {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+
 /* PROGRESS BAR */
 .side-bar {
 	display: flex;
 	justify-content: space-evenly;
+	background-color: var(--white);
+	position: sticky;
+	top: 10;
 }
 
 .progress {
