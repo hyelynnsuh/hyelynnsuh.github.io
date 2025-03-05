@@ -12,6 +12,7 @@
 
 * {
 	color: var(--black);
+	font-weight: 400;
 }
 
 .neue {
@@ -21,7 +22,7 @@
 @font-face {
 	font-family: 'Neue Haas Grotesk Display Pro';
 	src: url('NeueHaasDisplay-Mediu.woff2') format('woff2'),
-	url('NeueHaasDisplay-Mediu.woff') format('woff');;
+	url('NeueHaasDisplay-Mediu.woff') format('woff');
 	font-weight: 500;
     font-style: normal;
 }

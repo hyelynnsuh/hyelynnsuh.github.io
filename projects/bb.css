@@ -1,0 +1,31 @@
+:root {
+	--green: #849585;
+}
+
+.subtext-bold {
+	color: var(--green);
+}
+
+/* VINYL COVER */
+.tiny-vinyl::before {
+	content: "";
+	width: 50px;
+	height: 50px;
+	background: url("casefiles/bb.png") center/cover no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* GOAL */
+.goal-bold {
+	color: var(--green);
+}
+
+
+/* SECTION SPACING */
+section {
+	padding: var(--padding);
+	margin-top: var(--margin);
+}
