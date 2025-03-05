@@ -85,6 +85,21 @@
 }
 
 
+/* SUPERPOWER */
+#super-power {
+	background-color: var(--black);
+	padding: calc(var(--padding)*2);
+	margin-top: calc(var(--margin)*2);
+}
+
+.super-power {
+	font-size: calc(var(--font-size)*1.2);
+	font-weight: 600;
+	color: var(--white);
+	text-align: center;
+}
+
+
 /* PROJECTS */
 /* PRODUCT DESIGN */
 .design-type {
