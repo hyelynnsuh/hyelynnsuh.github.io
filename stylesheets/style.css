@@ -23,3 +23,62 @@
 	margin-right: var(--margin);
 	justify-self: end;
 }
+
+
+/* TURNTABLE */
+.turntable {
+	width: 300px;
+	height: 300px;
+	background: #333;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: inset 1px 2px 2px 4px var(--shadow), 0px 5px 15px rgba(0, 0, 0, 0.5);
+	margin: auto;
+	transform: rotate(5deg);
+	margin-top: var(--margin);
+	border-radius: calc(var(--border-radius)/2);
+}
+
+.platter {
+	width: 280px;
+	height: 280px;
+	background: radial-gradient(circle, #a9a9a9 20%, #000);
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+}
+
+.vinyl {
+	width: 250px;
+	height: 250px;
+	background: radial-gradient(circle, #111 10%, #222 40%, black);
+	border-radius: 50%;
+	position: relative;
+	animation: spin 3s linear infinite;
+	justify-self: center;
+	align-self: center;
+	margin-top: var(--padding);
+}
+
+.vinyl-center {
+	background: radial-gradient(circle, #ddd 20%, #999 60%, #666 100%);
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
