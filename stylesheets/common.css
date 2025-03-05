@@ -3,11 +3,13 @@
 	--root-size: 1.2rem;
 	--neue: 'Neue Haas Grotesk Display Pro';
 	--white: #fafafa;
+	--transparent-white: #fafafa85;
 	--black: #2a2723;
 	--shadow: #2a272382;
 	--margin: 1.5rem;
 	--padding: 1rem;
 	--border-radius: 1rem;
+	--thin-shadow:#a7a7a78d; 
 }
 
 * {
@@ -42,6 +44,7 @@ header {
 	box-shadow: 0px 4px 4px -2px var(--shadow);
 	background-color: var(--white);
 	top: 0;
+	z-index: 100;
 }
 
 /* LOGO */
