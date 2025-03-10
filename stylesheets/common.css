@@ -2,6 +2,7 @@
 	--font-size: 16px;
 	--root-size: 1.2rem;
 	--neue: 'Neue Haas Grotesk Display Pro';
+	--bolded: 'Bolded Neue';
 	--white: #fafafa;
 	--transparent-white: #fafafa85;
 	--black: #2a2723;
@@ -17,16 +18,28 @@
 	font-weight: 400;
 }
 
-.neue {
-	font-family: var(--neue);
-}
-
 @font-face {
 	font-family: 'Neue Haas Grotesk Display Pro';
 	src: url('../assets/fonts/NeueHaasDisplay-Light.woff2') format('woff2'),
 	url('../assets/fonts/NeueHaasDisplay-Light.woff') format('woff');
 	font-weight: 500;
     font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bolded Neue';
+	src: url('../assets/fonts/NeueHaasDisplay-Mediu.woff2') format('woff2'),
+	url('../assets/fonts/NeueHaasDisplay-Mediu.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+
+.neue {
+	font-family: var(--neue);
+}
+
+.bolded-neue {
+	font-family: var(--bolded);
 }
 
 body {
