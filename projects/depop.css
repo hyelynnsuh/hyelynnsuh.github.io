@@ -1,6 +1,7 @@
 /* DEPOP */
 :root {
---red: #E20020;
+	--red: #E20020;
+	--light-red: #e2001e72;
 }
 
 /* [id] {
@@ -53,6 +54,89 @@ section {
 }
 
 
+/* STACKABLE INSIGHTS */
+.card-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 28rem;
+	margin: auto;
+}
+
+.card-container {
+	position: relative;
+	width: 20rem;
+	height: 15rem;
+	perspective: 1000px;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	position: absolute;
+	width: 15rem;
+	height: 10rem;
+	background: linear-gradient(to right, var(--red), var(--light-red));
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--font-size);
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	transition: transform 0.5s ease, top 0.5 ease;
+	transform: translate(-50%, calc(100px * var(--i))) rotate(40deg) skew(-20deg, -10deg);
+	cursor: pointer;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	z-index: calc(-1 * var(--i));
+	top: 50%;
+	left: 50%;
+}
+
+.card:nth-child(1) {
+	/* background: linear-gradient(to right, #e2001eb3,#e2001e3b); */
+	top: 0px;
+}
+
+.card:nth-child(2) {
+	/* background: linear-gradient(to right, #e2001eb3, #e2001e3b); */
+	top: 10px;
+}
+
+.card:nth-child(3) {
+	/* background: linear-gradient(to right, #e2001eb3, #e2001e3b); */
+	top: 20px;
+}
+
+.card.expanded {
+	transform: rotateX(0deg) rotateY(0deg) translateY(-50px);
+	position: relative;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 320px;
+	height: 200px;
+	text-align: center;
+}
+
+.front-text {
+	color: var(--white);
+}
+
+.card.expanded .front-text {
+	display: none;
+}
+
+.hidden-card {
+	display: none;
+	font-size: var(--font-size);
+	margin-top: var(--margin);
+	color: var(--white);
+}
+
+.expanded .hidden-card {
+	display: block;
+}
 
 
 

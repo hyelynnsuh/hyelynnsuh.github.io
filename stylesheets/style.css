@@ -82,13 +82,14 @@
 	z-index: -1;
 	transform: rotate(5deg);
 	overflow: hidden;
-	margin: auto;
 	margin-top: calc(var(--margin)*1.2);
+	margin-left: var(--margin);
+	margin-right: var(--margin);
 }
 
 .turntable-container {
 	position: relative;
-	width: 280px;
+	width: 17rem;
 	overflow: hidden;
 }
 
