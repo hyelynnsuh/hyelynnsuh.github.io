@@ -34,6 +34,14 @@ section {
 
 
 /* GOAL */
+#goal::before, #goal::after {
+	border-color: var(--red);
+}
+
+.crop-marks::before, .crop-marks::after {
+	border-color: var(--red);
+}
+
 .goal-bold {
 	color: var(--red);
 }

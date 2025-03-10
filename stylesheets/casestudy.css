@@ -161,3 +161,52 @@
 	text-align: center;
 	/* potentially consider putting print marks around it */
 }
+
+/* CROP MARKS AROUND GOAL */
+/* GOAL */
+#goal {
+	position: relative;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	margin-top: calc(var(--margin)*2);
+}
+
+#goal::before, #goal::after {
+	content: "";
+	position: absolute;
+	border-style: solid;
+	width: 20px;
+	height: 25px;
+}
+
+#goal::before {
+	top: 0;
+	left: 0;
+	border-width: 1px 0 0 1px;
+}
+
+#goal::after {
+	top: 0;
+	right: 0;
+	border-width: 1px 1px 0 0;
+}
+
+.crop-marks::before, .crop-marks::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	border-style: solid;
+}
+
+.crop-marks::before {
+	bottom: 0;
+	left: 0;
+	border-width: 0 0 1px 1px;
+}
+
+.crop-marks::after {
+	bottom: 0;
+	right: 0;
+	border-width: 0 1px 1px 0;
+}

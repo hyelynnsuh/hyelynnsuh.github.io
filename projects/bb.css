@@ -23,6 +23,19 @@
 	color: var(--green);
 }
 
+#goal::before, #goal::after {
+	border-color: var(--green);
+}
+
+.crop-marks::before, .crop-marks::after {
+	border-color: var(--green);
+}
+
+.goal-bold {
+	color: var(--green);
+}
+
+
 
 /* SECTION SPACING */
 section {
