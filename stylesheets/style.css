@@ -32,13 +32,13 @@
 #intro::before {
 	top: 0;
 	left: 0;
-	border-width: 1px 0 0 1px;
+	border-width: .5px 0 0 .5px;
 }
 
 #intro::after {
 	top: 0;
 	right: 0;
-	border-width: 1px 1px 0 0;
+	border-width: .5px .5px 0 0;
 }
 
 .left-def {
@@ -63,13 +63,13 @@
 .crop-marks::before {
 	bottom: 0;
 	left: 0;
-	border-width: 0 0 1px 1px;
+	border-width: 0 0 .5px .5px;
 }
 
 .crop-marks::after {
 	bottom: 0;
 	right: 0;
-	border-width: 0 1px 1px 0;
+	border-width: 0 .5px .5px 0;
 }
 
 
@@ -217,13 +217,11 @@
 	gap: 0.5rem;
 }
 
-
-/* DOTTED BG??? */
-/* body {
-	background: var(--white);
-	background-image: radial-gradient(var(--shadow) 1px, transparent 0);
-	background-size: 40px 40px;
-	background-position: -19px -19px;
-} */
+#spotify {
+	width: 50%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	mix-blend-mode: luminosity;
+}
 
 

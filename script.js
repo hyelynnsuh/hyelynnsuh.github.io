@@ -1,11 +1,15 @@
-var lastScrollTop = 0
+let lastScrollTop = 0
+const navbar = document.querySelector('.navbar')
 
-$(window).scroll(function () {
-	var st = $(this).scrollTop()
-	if (st < lastScrollTop) {
-		$('.navbar').slideDown()
+window.addEventListener('scroll', function () {
+	let scrollTop = window.scrollY || document.documentElement.scrollTop
+	
+	if (scrollTop > lastScrollTop) {
+		navbar.style.transform = 'translateY(-100%)'
 	} else {
-		$('.navbar').slideUp()
+		navbar.style.transform = 'translateY(0)'
 	}
-	lastScrollTop = st
+
+	lastScrollTop = scrollTop
 })
+
