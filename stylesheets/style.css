@@ -31,6 +31,9 @@
 	justify-content: center;
 	align-items: center;
 	height: fit-content;
+	z-index: -1;
+	transform: rotate(5deg);
+	margin-top: calc(var(--margin)*1.2);
 }
 
 .turntable-container {
@@ -47,10 +50,12 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 60%;
+	width: 75%;
 	height: auto;
 	transform: translate(-50%, -50%);
-	animation: spin 3s linear infinite;
+	animation: spin 5s linear infinite;
+	margin-left: 2rem;
+	margin-bottom: 3.6rem;
 }
 
 .vinyl {
@@ -68,7 +73,7 @@
 	width: 300px;
 	box-shadow: inset 1px 2px 2px 4px var(--shadow), 0px 5px 15px rgba(0, 0, 0, 0.5);
 	margin: auto;
-	transform: rotate(5deg);
+
 	margin-top: var(--margin);
 	border-radius: calc(var(--border-radius)/2);
 	z-index: -20;
