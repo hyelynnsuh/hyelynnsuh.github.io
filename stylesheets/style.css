@@ -2,13 +2,9 @@
 /* HERO NAME */
 .name {
 	font-size: calc(var(--font-size)*3.2);
-	font-weight: 600;
 	text-align: center;
 }
 
-.name-subtext {
-	font-weight: 600;
-}
 
 #intro {
 	/* display: grid;
@@ -155,7 +151,6 @@
 
 .super-power {
 	font-size: calc(var(--font-size)*1.2);
-	font-weight: 600;
 	color: var(--white);
 	text-align: center;
 	/* background-color: var(--transparent-white);
@@ -178,7 +173,6 @@
 /* PRODUCT DESIGN */
 .design-type {
 	font-size: calc(var(--font-size)*1.3);
-	font-weight: 600;
 	border-radius: var(--border-radius);
 	text-align: center;
 	padding: calc(var(--padding)/1.8);
@@ -205,6 +199,9 @@
 	
 }
 
+.preview-desc {
+	font-weight: 500;
+}
 
 .pre-cover {
 	width: 70%;
@@ -228,7 +225,6 @@
 
 .proj-name {
 	font-size: calc(var(--font-size)*1.2);
-	font-weight: 600;
 }
 
 .mult-types {

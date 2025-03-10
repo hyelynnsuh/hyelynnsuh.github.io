@@ -23,8 +23,8 @@
 
 @font-face {
 	font-family: 'Neue Haas Grotesk Display Pro';
-	src: url('NeueHaasDisplay-Mediu.woff2') format('woff2'),
-	url('NeueHaasDisplay-Mediu.woff') format('woff');
+	src: url('../assets/fonts/NeueHaasDisplay-Light.woff2') format('woff2'),
+	url('../assets/fonts/NeueHaasDisplay-Light.woff') format('woff');
 	font-weight: 500;
     font-style: normal;
 }
