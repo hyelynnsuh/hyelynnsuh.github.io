@@ -75,7 +75,7 @@
 	height: 1rem;
 	gap: 0.3rem;
 	background-color: var(--white);
-	margin-left: calc(var(--margin)*3);
+	margin-left: calc(var(--margin)*2.5);
 }
 
 .words {

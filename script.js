@@ -42,4 +42,13 @@ document.addEventListener('click', (event) => {
 })
 
 
+// PROGRESS BAR SCROLL
+const scrollProgress = document.getElementById('scroll-progress')
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+window.addEventListener('scroll', () => {
+	const scrollUp = document.body.scrollUp || document.documentElement.scrollUp
+	scrollProgress.style.width = `${(scrollUp / height) * 100}%`
+})
+
 

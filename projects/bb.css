@@ -42,3 +42,45 @@ section {
 	padding: var(--padding);
 	margin-top: var(--margin);
 }
+
+.moving-veggies {
+	height: 8rem;
+	overflow: clip;
+	animation: move_veggies 5s infinite;
+}
+
+.veggies {
+	aspect-ratio: 2 / 1;
+	width: 30rem;
+	object-fit: cover;
+	overflow: clip;
+	scale: 130%;
+	transform: translateY(10px);
+	align-self: center;
+}
+
+/* @keyframes move_veggies {
+	0% {
+		transform: translateX(0%);
+	}
+
+	20% {
+		transform: translateX(100%);
+	}
+
+	40% {
+		transform: translateX(200%);
+	}
+
+	60% {
+		transform: translateX(300%);
+	}
+
+	80% {
+		transform: translateX(400%);
+	}
+
+	100% {
+		transform: translateX(500%);
+	}
+} */

@@ -1,0 +1,28 @@
+:root {
+	--gray: #6c6c6c;
+}
+
+
+.pic {
+	width: 15rem;
+	margin: auto;
+}
+
+.polaroid {
+	display: flex;
+	flex-direction: column;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+}
+
+.polaroid {
+	margin-bottom: var(--margin);
+}
+
+h2 {
+	font-size: calc(var(--font-size)*2);
+}
+
