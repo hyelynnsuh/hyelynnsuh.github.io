@@ -121,6 +121,7 @@ section {
 
 .front-text {
 	color: var(--white);
+	font-family: var(--bolded);
 }
 
 .card.expanded .front-text {
