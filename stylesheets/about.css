@@ -2,6 +2,9 @@
 	--gray: #6c6c6c;
 }
 
+* {
+	font-weight: 350;
+}
 
 .pic {
 	width: 15rem;
@@ -16,13 +19,62 @@
 .about {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: var(--margin);
 }
 
 .polaroid {
 	margin-bottom: var(--margin);
 }
 
-h2 {
+h2, h3 {
 	font-size: calc(var(--font-size)*2);
+	font-family: var(--bolded);
 }
 
+.quality {
+	color: var(--gray);
+	font-style: italic;
+}
+
+.hyelynn {
+	max-width: 20rem;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+}
+
+.about-name {
+	margin-bottom: var(--padding);
+}
+
+.who {
+	padding-left: var(--padding);
+	margin-bottom: var(--margin);
+}
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+video {
+	width: 19rem;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+}
+
+.playlists {
+	object-fit: cover;
+}
+
+.album-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.music {
+	font-size: calc(var(--font-size)*1.2);
+	background: var(--black);
+	color: var(--white);
+	padding: var(--padding);
+	
+}

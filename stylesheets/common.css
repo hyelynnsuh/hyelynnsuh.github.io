@@ -79,6 +79,10 @@ ul {
 	list-style: none;
 }
 
+li > a {
+	cursor: pointer;
+}
+
 .nav {
 	width: 100%;
 	position: absolute;
