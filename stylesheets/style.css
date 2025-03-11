@@ -287,4 +287,63 @@
 	mix-blend-mode: luminosity;
 }
 
+@media (min-width: 800px) {
+	/* HERO TEXT */
+	.name {
+		font-size: calc(var(--font-size)*5);
+		width: fit-content;
+		margin: auto;
+	}
+	
+	.name-subtext {
+		width: fit-content;
+		font-size: calc(var(--font-size)*1.2);
+	}
 
+	.flip {
+		font-size: calc(var(--font-size)*1.2);
+	}
+
+	.left-def {
+		margin-left: calc(var(--margin)*7);
+	}
+
+	.wrapper {
+		margin-left: calc(var(--margin)*15);
+	}
+
+	#intro {
+		width: fit-content;
+		margin: auto;
+	}
+
+	@keyframes spin_words {
+		0% {
+			transform: translateY(0%);
+		}
+	
+		20% {
+			transform: translateY(-120%);
+		}
+	
+		40% {
+			transform: translateY(-220%);
+		}
+	
+		60% {
+			transform: translateY(-320%);
+		}
+	
+		80% {
+			transform: translateY(-420%);
+		}
+	
+		100% {
+			transform: translateY(-520%);
+		}
+	}
+
+	
+
+
+}

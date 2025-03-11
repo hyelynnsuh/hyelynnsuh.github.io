@@ -48,7 +48,7 @@ const height = document.documentElement.scrollHeight - document.documentElement.
 
 window.addEventListener('scroll', () => {
 	const scrollUp = document.body.scrollUp || document.documentElement.scrollUp
-	scrollProgress.style.width = `${(scrollUp / height) * 100}%`
+	scrollProgress.style.width = '${(scrollUp / height) * 100}%'
 })
 
 
