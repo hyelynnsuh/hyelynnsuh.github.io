@@ -305,15 +305,15 @@
 	}
 
 	.left-def {
-		margin-left: calc(var(--margin)*7);
+		margin-left: calc(var(--margin)*4);
 	}
 
 	.wrapper {
-		margin-left: calc(var(--margin)*15);
+		margin-left: calc(var(--margin)*10);
 	}
 
 	#intro {
-		width: fit-content;
+		width: 35rem;
 		margin: auto;
 	}
 
@@ -341,9 +341,26 @@
 		100% {
 			transform: translateY(-520%);
 		}
+
+		
 	}
 
-	
+
+	/* RECORD PLAYER */
+	.turntable-container {
+		width: 22rem;
+	}
 
 
+	/* PROJECTS */
+	.project-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-left: var(--padding);
+		padding-right: var(--padding);
+	}
+
+	.project {
+		max-width: 15rem;
+	}
 }
