@@ -51,6 +51,62 @@ section {
 }
 
 
+/* PROBLEM */
+.discovery {
+	background-color: var(--red);
+	padding: var(--padding);
+	border-radius: var(--border-radius);
+	box-shadow: inset 0 0 10px black;
+	transform: rotate(3deg);
+	width: 20rem;
+}
+
+.problem {
+	color: var(--white);
+	text-align: center;
+	font-size: calc(var(--font-size)*1.3);
+}
+
+#discovery {
+	padding-bottom: var(--padding);
+}
+
+
+/* RESEARCH */
+.prelim {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: var(--border-radius);
+	border: solid 1px var(--red);
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	width: 10rem;
+	padding-top: var(--padding);
+}
+
+.icon {
+	width: 15%;
+}
+
+.stat {
+	font-family: var(--bolded);
+	font-size: calc(var(--font-size)*2);
+	color: var(--red);
+}
+
+.label {
+	background-color: var(--red);
+	font-family: var(--bolded);
+	color: var(--white);
+	width: 10rem;
+	text-align: center;
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	padding: calc(var(--padding)/1.2);
+}
+
+
 /* STACKABLE INSIGHTS */
 .card-flex {
 	display: flex;
