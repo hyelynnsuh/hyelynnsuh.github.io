@@ -106,6 +106,86 @@ section {
 	padding: calc(var(--padding)/1.2);
 }
 
+/* SLIDER */
+.slider {
+	width: 10rem;
+	text-align: center;
+	overflow: hidden;
+	margin: auto;
+}
+
+.slides {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+	background: var(--white);
+	border: 1px solid var(--red);
+	border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.slides > .prelim {
+	scroll-snap-align: start;
+	flex-shrink: 0;
+	transform-origin: center center;
+	transform: scale(1);
+	transition: transform 0.5s ease;
+	position: relative;
+}
+
+.slider > .a-tags > a {
+	display: inline-flex;
+	width: 2rem;
+	height: 2rem;
+	background: var(--white);
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 0 0 0.5rem 0;
+	position: relative;
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		border: solid 1px var(--red);
+		border-radius: 50%;
+		padding: 0.2rem;
+	}
+}
+
+.slider > a:active {
+	top: 1px;
+}
+
+.slider > a:focus {
+	background: white;
+}
+
+@supports (scroll-snap-type: mandatory) {
+	.slider > a {
+		display: none;
+	}
+}
+
+.slider-flex {
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
 
 /* STACKABLE INSIGHTS */
 .card-flex {
