@@ -206,6 +206,25 @@
 }
 
 
+/* HIFI */
+.hifi {
+	display: flex;
+	flex-direction: column;
+}
+
+.hifi-vid {
+	width: 20rem;
+}
+
+.hifi-vid > img {
+	width: 50%;
+	object-fit: cover;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
 /* 800PX */
 @media (min-width: 800px) {
 	/* HERO */
@@ -304,4 +323,26 @@
 		gap: 5rem;
 	}
 
+
+	/* HIFI */
+	.hifi {
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.hifi-info {
+		display: flex;
+		flex-direction: column;
+		width: 20rem;
+		gap: 2rem;
+	}
+
+	.hifi-vid {
+		width: 10rem;
+	}
+
+	.hifi-vid > img {
+		width: 100%;
+	}
 }
