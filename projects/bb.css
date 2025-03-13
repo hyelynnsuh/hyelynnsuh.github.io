@@ -35,6 +35,15 @@
 	color: var(--green);
 }
 
+#goal {
+	margin-top: 0;
+}
+
+
+/* PROBLEM */
+.discovery {
+	background-color: var(--green);
+}
 
 
 /* SECTION SPACING */
@@ -57,6 +66,7 @@ section {
 	scale: 130%;
 	transform: translateY(10px);
 	align-self: center;
+	height: 7rem;
 }
 
 /* @keyframes move_veggies {
@@ -84,3 +94,32 @@ section {
 		transform: translateX(500%);
 	}
 } */
+
+
+/* RESEARCH */
+.prelim {
+	border: solid 1px var(--green);
+}
+
+.icon {
+	width: 15%;
+}
+
+.stat {
+	color: var(--green);
+}
+
+.label {
+	background-color: var(--green);
+}
+
+/* SLIDER */
+.slides::-webkit-scrollbar-thumb {
+	border: 1px solid var(--green);
+}
+
+.slider > .a-tags > a {
+	img {
+		border: solid 1px var(--green);
+	}
+}
