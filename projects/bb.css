@@ -343,3 +343,21 @@ section {
 		opacity: 1;
 	}
 }
+
+.lofi-vid {
+	width: 20.5rem;
+}
+
+.lofi {
+	width: 100%;
+	object-fit: cover;
+}
+
+
+.lofi-vid, .feedback {
+	margin-top: var(--margin);
+}
+
+.feedback {
+	margin-top: calc(var(--margin)*1.3);
+}
