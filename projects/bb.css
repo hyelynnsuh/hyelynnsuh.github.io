@@ -18,6 +18,34 @@
 	transform: translate(-50%, -50%);
 }
 
+
+/* CASE HERO */
+.case-title {
+	font-family: var(--bolded);
+}
+
+
+/* SEE HIFI LINK */
+.see-hifi {
+	background-color: var(--white);
+	width: 19.5rem;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	padding: var(--padding);
+	border: solid 1px var(--green);
+	border-radius: calc(var(--border-radius)/1.2);
+	margin-bottom: 0.5rem;
+}
+
+.see {
+	font-family: var(--bolded);
+	text-align: center;
+	width: 19rem;
+	color: var(--green);
+
+}
+
+
 /* GOAL */
 .goal-bold {
 	color: var(--green);
@@ -36,8 +64,15 @@
 }
 
 #goal {
-	margin-top: 0;
+	margin-bottom: var(--margin);
+	margin-top: var(--margin);
 }
+
+#bg {
+	margin-top: 0;
+	padding-top: 0;
+}
+
 
 
 /* PROBLEM */
