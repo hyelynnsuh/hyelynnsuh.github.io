@@ -81,3 +81,34 @@ function showSlides(n) {
 	slides[slideIndex-1].style.display = 'block'
 	dots[slideIndex-1].className += ' active'
 }
+
+
+// HIFI SLIDESHOW
+let hifiIndex = 1
+showHifi(hifiIndex)
+
+function plusHifi(n) {
+	showHifi(hifiIndex += n)
+}
+
+function currentHifiSlide(n) {
+	showHifi(hifiIndex = n)
+}
+
+function showHifi(n) {
+	let i
+	let hifi = document.getElementsByClassName('hifi-slide')
+	let hifidots = document.getElementsByClassName('hifi-dots')
+	if (n > hifi.length) {
+		hifiIndex = 1
+	}
+	if (n < 1) {
+		hifiIndex = hifi.length
+	}
+	for (i = 0; i < hifi.length; i++) {
+		hifi[i].style.display = 'none'
+		hifidots[i].className = hifidots[i].className.replace(' active', '')
+	}
+	hifi[hifiIndex-1].style.display = 'block'
+	dots[hifiIndex-1].className += ' active'
+}
