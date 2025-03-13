@@ -225,6 +225,9 @@
 	padding-bottom: var(--padding);
 }
 
+.center {
+	text-align: center;
+}
 
 /* RESEARCH */
 .prelim {
