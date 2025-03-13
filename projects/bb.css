@@ -1,6 +1,7 @@
 :root {
 	--green: #849585;
 	--darkgreen: #1C2721;
+	--highlight: #BAC7BE;
 }
 
 .subtext-bold {
@@ -27,23 +28,44 @@
 
 
 /* SEE HIFI LINK */
-.see-hifi {
+.seemore {
+	display: flex;
+	height: 3rem;
+	margin-bottom: calc(var(--margin)*1.5);
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+/* .see-hifi {
 	background-color: var(--white);
-	width: 19.5rem;
-	margin-left: var(--margin);
-	margin-right: var(--margin);
+	width: 10rem;
 	padding: var(--padding);
 	border: solid 1px var(--green);
 	border-radius: calc(var(--border-radius)/1.2);
 	margin-bottom: var(--margin);
-}
+} */
 
 .see {
 	font-family: var(--bolded);
 	text-align: center;
-	width: 19rem;
+	width: 10.5rem;
 	color: var(--green);
+	font-size: calc(var(--font-size)/1.2);
+	border: solid 1px var(--green);
+	padding: var(--padding);
+	border-radius:  calc(var(--border-radius)/1.2);
+}
 
+.jump {
+	background-color: var(--green);
+	border: 1px solid var(--green);
+	padding: var(--padding);
+	border-radius: calc(var(--border-radius)/1.2);
+	width: 10.5rem;
+	color: var(--white);
+	font-family: var(--bolded);
+	text-align: center;
+	font-size: calc(var(--font-size)/1.2);
 }
 
 
@@ -82,20 +104,7 @@
 	padding-top: 0;
 }
 
-.jump {
-	background-color: var(--green);
-	border: 1px solid var(--green);
-	padding: var(--padding);
-	border-radius: calc(var(--border-radius)/1.2);
-	width: 20.5rem;
-	color: var(--white);
-	font-family: var(--bolded);
-	text-align: center;
-}
 
-.jump-button {
-	margin-left: auto;
-}
 
 
 /* PROBLEM */
@@ -441,4 +450,10 @@ section {
 	to {
 		opacity: 1;
 	}
+}
+
+
+/* HIGHLIGHT SPAN */
+.highlight {
+	background-color: var(--highlight);
 }
