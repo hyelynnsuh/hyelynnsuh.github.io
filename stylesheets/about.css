@@ -57,8 +57,7 @@ h2, h3 {
 
 video {
 	width: 19rem;
-	margin-left: var(--margin);
-	margin-right: var(--margin);
+	margin: auto;
 }
 
 .playlists {
