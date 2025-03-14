@@ -28,44 +28,14 @@
 
 
 /* SEE HIFI LINK */
-.seemore {
-	display: flex;
-	height: 3rem;
-	margin-bottom: calc(var(--margin)*1.5);
-	justify-content: center;
-	gap: 1.5rem;
-}
-
-/* .see-hifi {
-	background-color: var(--white);
-	width: 10rem;
-	padding: var(--padding);
-	border: solid 1px var(--green);
-	border-radius: calc(var(--border-radius)/1.2);
-	margin-bottom: var(--margin);
-} */
-
 .see {
-	font-family: var(--bolded);
-	text-align: center;
-	width: 10.5rem;
 	color: var(--green);
-	font-size: calc(var(--font-size)/1.2);
 	border: solid 1px var(--green);
-	padding: var(--padding);
-	border-radius:  calc(var(--border-radius)/1.2);
 }
 
 .jump {
 	background-color: var(--green);
 	border: 1px solid var(--green);
-	padding: var(--padding);
-	border-radius: calc(var(--border-radius)/1.2);
-	width: 10.5rem;
-	color: var(--white);
-	font-family: var(--bolded);
-	text-align: center;
-	font-size: calc(var(--font-size)/1.2);
 }
 
 
@@ -357,6 +327,7 @@ section {
 /* LOFI */
 .lofi-vid {
 	width: 20.5rem;
+	margin: auto;
 }
 
 .lofi {
@@ -456,4 +427,35 @@ section {
 /* HIGHLIGHT SPAN */
 .highlight {
 	background-color: var(--highlight);
+}
+
+
+/* 800px */
+@media (min-width: 800px) {
+	.bb-carousel {
+		width: 49rem;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.moving-veggies {
+		width: 49rem;
+		height: 10rem;
+
+		img {
+			width: 100%;
+			scale: 250%;
+			object-fit: contain;
+			transform: translateY(20%);
+		}
+	}
+
+
+	/* LOFI */
+	.lofi-vid {
+		width: 35.5rem;
+	}
+
 }

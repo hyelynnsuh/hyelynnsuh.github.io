@@ -38,8 +38,7 @@ h2, h3 {
 
 .hyelynn {
 	max-width: 20rem;
-	margin-left: var(--margin);
-	margin-right: var(--margin);
+	margin: auto;
 }
 
 .about-name {
@@ -77,4 +76,16 @@ video {
 	color: var(--white);
 	padding: var(--padding);
 	
+}
+
+@media (min-width: 800px) {
+	.about-page {
+		display: flex;
+		width: 45rem;
+		margin: auto;
+	}
+
+	.pic {
+		width: 20rem;
+	}
 }

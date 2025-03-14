@@ -70,8 +70,6 @@
 	margin-top: calc(var(--padding)/2.8);
 }
 
-
-
 @keyframes spin {
 	from {
 		transform: rotate(0deg);
@@ -80,6 +78,36 @@
 		transform: rotate(360deg);
 	}
 }
+
+
+/* SEE HIFI LINK */
+.seemore {
+	display: flex;
+	height: 3rem;
+	margin-bottom: calc(var(--margin)*1.5);
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+.see {
+	font-family: var(--bolded);
+	text-align: center;
+	width: 10.5rem;
+	font-size: calc(var(--font-size)/1.2);
+	padding: var(--padding);
+	border-radius:  calc(var(--border-radius)/1.2);
+}
+
+.jump {
+	padding: var(--padding);
+	border-radius: calc(var(--border-radius)/1.2);
+	width: 10.5rem;
+	color: var(--white);
+	font-family: var(--bolded);
+	text-align: center;
+	font-size: calc(var(--font-size)/1.2);
+}
+
 
 
 /* ALL CONTENT */
@@ -360,6 +388,10 @@
 
 /* 800PX */
 @media (min-width: 800px) {
+	p {
+		line-height: var(--lineheight);
+	}
+
 	/* HERO */
 	/* TURNTABLE */
 	.case-hero {
@@ -413,6 +445,16 @@
 		font-size: calc(var(--font-size)*1.2);
 	}
 
+	/* JUMP LINKS */
+	.seemore {
+		justify-content: right;
+		margin-right: calc(var(--margin)*4.3);
+	}
+
+	.see, .jump {
+		font-size: var(--font-size);
+	}
+
 
 	/* CAROUSEL */
 	.depop-carousel > img {
@@ -426,6 +468,10 @@
 
 
 	/* GOAL */
+	#bg {
+		margin-top: var(--margin);
+	}
+
 	#goal {
 		width: 36rem;
 		margin-left: auto;
@@ -455,6 +501,23 @@
 	.content {
 		gap: 5rem;
 	}
+
+
+	/* DISCOVERY */
+	.discovery {
+		margin: auto;
+		padding-top: calc(var(--padding)*2);
+		padding-bottom: calc(var(--padding)*2);
+		width: 30rem;
+	}
+
+	.problem {
+		font-size: calc(var(--font-size)*1.5);
+	}
+
+
+	/* SLIDER */
+
 
 
 	/* HIFI */

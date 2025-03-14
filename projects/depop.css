@@ -23,6 +23,17 @@
 	transform: translate(-50%, -50%);
 }
 
+/* SEE HIFI LINK */
+.see {
+	color: var(--red);
+	border: solid 1px var(--red);
+}
+
+.jump {
+	background-color: var(--red);
+	border: 1px solid var(--red);
+}
+
 
 /* SECTION SPACING */
 section {
