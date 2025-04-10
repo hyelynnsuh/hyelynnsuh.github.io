@@ -288,6 +288,7 @@
 }
 
 @media (min-width: 800px) {
+
 	/* HERO TEXT */
 	.name {
 		font-size: calc(var(--font-size)*5);
@@ -352,15 +353,31 @@
 	}
 
 
+	/* SUPERPOWER */
+	.super-power {
+		max-width: 40rem;
+		margin: auto;
+		padding: calc(var(--padding)*2);
+		font-size: calc(var(--font-size)*1.3);
+	}
+
+
 	/* PROJECTS */
+	.design-type {
+		max-width: 40rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.project-grid {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		padding-left: var(--padding);
-		padding-right: var(--padding);
+		grid-template-columns: 1fr 1fr;
+		gap: var(--gap);
+		max-width: 40rem;
+		margin: auto;
 	}
 
 	.project {
-		max-width: 15rem;
+		max-width: 19rem;
 	}
 }

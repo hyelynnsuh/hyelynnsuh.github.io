@@ -12,6 +12,7 @@
 	--border-radius: 1rem;
 	--thin-shadow:#a7a7a78d; 
 	--lineheight: 24px;
+	--gap: 1rem;
 }
 
 * {
@@ -206,3 +207,11 @@ footer {
 	align-self: center;
 }
 
+
+/* 800PX */
+@media(min-width: 800px) {
+	.logo > img {
+		width: 10%;
+		height: 20%;
+	}
+}
