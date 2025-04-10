@@ -187,7 +187,7 @@ footer {
 
 .footer-info {
 	color: var(--white);
-	font-weight: 500;
+	font-weight: bolder;
 }
 
 .footer {
@@ -213,5 +213,9 @@ footer {
 	.logo > img {
 		width: 10%;
 		height: 20%;
+	}
+
+	footer {
+		padding: calc(var(--padding)*2);
 	}
 }

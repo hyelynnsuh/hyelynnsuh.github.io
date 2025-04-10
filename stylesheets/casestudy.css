@@ -447,12 +447,18 @@
 
 	/* JUMP LINKS */
 	.seemore {
-		justify-content: right;
-		margin-right: calc(var(--margin)*4.3);
+		max-width: 36rem;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-between;
+		gap: var(--gap);
 	}
+
 
 	.see, .jump {
 		font-size: var(--font-size);
+		padding-left: calc(var(--padding)*4.5);
+		padding-right: calc(var(--padding)*4.5);
 	}
 
 
@@ -518,6 +524,11 @@
 
 	/* SLIDER */
 
+
+	/* CARD FLEX */
+	.card-flex {
+		flex-direction: column;
+	}
 
 
 	/* HIFI */

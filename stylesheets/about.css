@@ -79,12 +79,17 @@ video {
 
 @media (min-width: 800px) {
 	.about-page {
-		display: flex;
-		width: 45rem;
+		width: 36rem;
 		margin: auto;
+	}
+
+	.hyelynn {
+		max-width: 36rem;
 	}
 
 	.pic {
 		width: 20rem;
 	}
+
+
 }

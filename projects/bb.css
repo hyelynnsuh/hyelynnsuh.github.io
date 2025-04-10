@@ -433,7 +433,8 @@ section {
 /* 800px */
 @media (min-width: 800px) {
 	.bb-carousel {
-		width: 49rem;
+		width: 36rem;
+		margin: auto;
 
 		img {
 			width: 100%;

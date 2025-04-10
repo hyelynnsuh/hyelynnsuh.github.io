@@ -234,3 +234,24 @@ video {
 
 
 
+/* 800px */
+@media (min-width: 800px) {
+	.main-content {
+		padding: 0;
+	}
+
+	video {
+		width: 36rem;
+	}
+
+	.play-next {
+		max-width: 36rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: calc(var(--margin)*2);
+	}
+
+	.play-button {
+		width: 5%;
+	}
+}
