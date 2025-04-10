@@ -64,6 +64,26 @@ video {
 	object-fit: cover;
 }
 
+.playlists-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	gap: 1rem;
+	margin-top: var(--margin);
+}
+
+.album-names {
+	/* font-weight: 500;
+	border: solid 1px var(--black);
+	border-radius: var(--border-radius);
+	padding: calc(var(--padding)/1.9);
+	width: fit-content; */
+	text-decoration: underline;
+}
+
 .album-container {
 	display: flex;
 	flex-direction: column;
