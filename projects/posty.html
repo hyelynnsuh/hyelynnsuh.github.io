@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Depop: New Feature</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../stylesheets/reset.css" rel="stylesheet">
+		<link href="../assets/fonts/stylesheet.css">
+		<link href="../stylesheets/common.css" rel="stylesheet">
+		<link href="posty.css" rel="stylesheet">
+		<link href="../stylesheets/casestudy.css" rel="stylesheet">
+		<script defer src="../script.js"></script>
+
+		<!-- FONTS -->
+		<link rel="preload" href="../assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
+	</head>
+	<body class="neue">
+		<header class="navbar">
+			<!-- LOGO -->
+			<a href="../index.html" class="logo">
+				<img src="../assets/black-logo.gif">
+			</a>
+
+			<!-- HAMBURGER MENU -->
+			<input class="side-menu" type="checkbox" id="side-menu">
+			<label class="hamb" for="side-menu">
+				<span class="hamb-line"></span>
+			</label>
+			<nav class="nav">
+				<ul class="menu">
+					<li>
+						<a>work</a>
+					</li>
+					<li>
+						<a>library</a>
+					</li>
+					<li>
+						<a href="../pages/about.html">about</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<!-- HERO TEXT -->
+			<div id="case-hero">
+				<div class="case-hero">
+					<div class="tiny-table">
+						<div class="tiny-platter">
+							<div class="tiny-vinyl">
+								<div class="tiny-center"></div>
+							</div>
+						</div>
+					</div>
+					<div class="case-description">
+						<p>now playing...</p>
+						<h3 class="case-title bolded-neue">Posty</h1>
+						<div class="case-subtext">
+							<div class="bold-unbold">
+								<h4 class="subtext-bold">role</h4>
+								<p class="subtext-unbold">lead product designer</p>
+							</div>
+							<div class="bold-unbold">
+								<h4 class="subtext-bold">tools</h4>
+								<p class="subtext-unbold">figma, sora, AE</p>
+							</div>
+							<div class="bold-unbold">
+								<h4 class="subtext-bold">team</h4>
+								<p class="subtext-unbold">4 designers</p>
+							</div>
+							<div class="bold-unbold">
+								<h4 class="subtext-bold">timeline</h4>
+								<p class="subtext-unbold">apr '25</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="seemore">
+					<button class="see-hifi">
+						<a class="see" href="https://www.figma.com/proto/V0sJGPqf2TLwgYWSndnRfY/hye-lynn-suh?page-id=284%3A278&node-id=370-429&node-type=section&viewport=880%2C208%2C0.05&t=Cb9mBxnWK2mGy2rR-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=380%3A1978">see our prototype</a>
+					</button>
+					<button class="jump-button">
+						<a class="jump" href="#final">jump to final designs</a>
+					</button>
+				</div>
+			</div>
+
+			<div class="depop-carousel">
+				<img src="casefiles/posty-cover.jpg">
+			</div>
+
+			<section id="goal">
+				<h3 class="goal">
+					reimagining composting to be <span class="goal-bold"> human-centered, data-driven, and delightful</span>   in the year 2030
+				</h3>
+				<div class="crop-marks"></div>
+			</section>
+
+			<section id="bg">
+				<p class="app-bg">
+					Over a span of 48 hours, 2 designers and I participated in an AI Design Hackathon, where we were prompted to use AI to mediate between human and ecological needs in urban spaces.
+				</p>
+			</section>
+
+			<!-- CONTENT -->
+			 <div id="scroll-progress"></div>
+			 <section class="main-content">
+				<!-- <nav class="side-bar">
+					<a class="progress" href="#discovery">1</a>
+					<div class="line"></div>
+					<a class="progress">2</a>
+					<div class="line"></div>
+					<a class="progress">3</a>
+					<div class="line"></div>
+					<a class="progress">4</a>
+					<div class="line"></div>
+					<a class="progress">5</a>
+				 </nav> -->
+				 <div class="content">
+					<div class="content-flex">
+						<div class="discovery">
+							<h3 class="bold problem" id="discovery">
+								so... what's the problem?
+							</h3>
+							<p class="info problem">
+								Composting in NYC is broken. You’re legally required to do it, but most people either don’t know how, don’t care, or find it too much work. So we asked: what if composting wasn’t just required… what if it was fun?
+							</p>
+						</div>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							understanding user needs
+						</h3>
+						<p class="info">
+							To understand the problem better, we did some preliminary research: NYC produces over <span class="bolded-neue">1 million tons</span> of food waste each year. And <span class="bolded-neue">97%</span> of that goes to landfill or incineration — creating methane, a greenhouse gas over <span class="bolded-neue">80x</span> more harmful than CO₂ in the short term. 
+						</p>
+						<p>
+							We visited Union Square's drop-off and spoke to the Lower East Side Ecology Center. They want to grow — but they’re underfunded and overwhelmed.
+						</p>
+					</div>
+					<!-- <div class="content-flex">
+						<h3 class="bold center">click on the cards to see what we found...
+						</h3>
+						<div class="card-flex">
+							<div class="card-container">
+								<div class="card" style="--i:-1" onclick="expandCard(this)">
+									<span class="front-text"> insight 1</span>
+									<div class="hidden-card">
+										users go into the app and don’t end up buying anything
+									</div>
+								</div>
+								<div class="card" style="--i:0" onclick="expandCard(this)">
+									<span class="front-text"> insight 2</span>
+									<div class="hidden-card">
+										users feel like their experience is not customized in an organized fashion
+									</div>
+								</div>
+								<div class="card" style="--i: 1" onclick="expandCard(this)">
+									<span class="front-text"> insight 3</span>
+									<div class="hidden-card">
+										there is a lack of trust between the seller and the buyer
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					<div class="content-flex" >
+						<h3 class="bold">
+							sketching
+						</h3>
+						<p class="info">
+							To explore potential solutions, we facilitated a brainstorming session where we focused on the question: 
+						</p>
+						<p class="bolded-neue">
+							How might we make a composting system that is so easy, so rewarding, and so fun that people actually want to do it?”
+						</p>
+						<video loop autoplay muted>
+							<source src="casefiles/depop-sketches.mov">
+						</video>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							prototyping & user testing
+						</h3>
+						<p class="info">
+							Using Figma, I created mid-fidelity prototypes of the new features and conducted usability tests with three users who matched our target audience.
+						</p>
+						<video autoplay loop muted>
+							<source src="casefiles/depop-midfi.mp4">
+						</video>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							here's what i learned...
+						</h3>
+						<video autoplay muted>
+							<source src="casefiles/depop-popups.mp4">
+						</video>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							systems map
+						</h3>
+						<p class="info">
+							These insights inspired me to rebuild Depop's current systems map, including both the seller and buyer flows. After I synthesized my findings from the usability testing, I edited my system's map to visualize where my new features would fit inside their current existing flow.
+						</p>
+						<img src="casefiles/systems.png">
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							final design solutions
+						</h3>
+						<p class="info">
+							I crafted high-fidelity prototypes that aligned with Depop's brand message of “making fashion more circular.” Key features included:
+						</p>
+					</div>
+					<div class="content-flex hifi">
+						<div class="hifi-info">
+							<h3 class="bold">
+								the style finder quiz
+							</h3>
+							<p class="info">
+								a 5 step quiz completed immediately after creating an account. The quiz includes questions about the user’s preferred fashion styles, fit, brands, and colors.
+							</p>
+						</div>
+						<div class="hifi-vid">
+							<img loop src="casefiles/quiz.gif">
+						</div>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							the outfit generator
+						</h3>
+						<p class="info">
+							generates different outfits based off of your preferences in the Style Finder Quiz. The result will show you links to the products shown on the avatar.
+						</p>
+						<div class="hifi-vid">
+							<img loop src="casefiles/generator.gif">
+						</div>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							pinpointed posts
+						</h3>
+						<p class="info">
+							Each piece of clothing has a tag that opens to a pop up, showing actual posts by sellers that are similar to the fit you generated. Here, you can quick save a post or go straight to the post.
+						</p>
+						<div class="hifi-vid">
+							<img loop src="casefiles/pinpoint.gif">
+						</div>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							edge case
+						</h3>
+						<p class="info">
+							In case the user skips the onboarding quiz, they can edit their preferences manually on the home page to customize the outfits the generator creates. These filters will automatically apply to the user's search feed as well, reducing any repetitive actions.
+						</p>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							learnings
+						</h3>
+						<p class="info">
+							If I could do this project again, I would create more initial low-fi sketches exploring different features, play with some loading bar animations like Depop does on the current app, and lastly, interview sellers on Depop to understand the differences in the user journeys.
+						</p>
+					</div>
+					<div class="content-flex">
+						<h3 class="bold">
+							next steps
+						</h3>
+						<p class="info">
+							For my next steps, I would like to explore my other insight which was user-seller trust, add more edge cases to my other features, and explore the generator concept further to have accurate and inclusive representation of all body types.
+						</p>
+					</div>
+				 </section>
+			 </section>
+			 <a href="basketbuddies.html" class="play-next">
+				<button class="next">
+					play next
+				 </button>
+				 <img class="play-button" src="../assets/playnext.png">
+			</a>
+		</main>
+
+		<footer>
+			<div class="footer">
+				<p class="footer-info credits">&copy; hye lynn suh, 2025</p>
+				<div class="socials">
+					<a class="footer-info">linkedin</a>
+					<a class="footer-info">email</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

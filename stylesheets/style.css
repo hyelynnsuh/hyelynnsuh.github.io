@@ -256,6 +256,10 @@
 	height: 80%;
 }
 
+.posty-cover {
+	width: 50%;
+}
+
 .proj-preview {
 	max-width: 15rem;
 	display: flex;
@@ -451,6 +455,10 @@
 	/* RECORD PLAYER */
 	.turntable-container {
 		width: 35rem;
+	}
+
+	.main-turn {
+		margin-left: 4rem;
 	}
 
 
