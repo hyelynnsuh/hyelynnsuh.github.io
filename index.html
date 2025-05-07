@@ -1,66 +1,151 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hye Lynn Suh</title>
+		<title>Portfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="reset.css" rel="stylesheet">
+		<link href="common.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
+		<link href="assets/fonts/stylesheet.css" rel="stylesheet">
+		<script defer src="script.js"></script>
 
-		<!-- FONTS-->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Didact+Gothic&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inclusive+Sans:ital@0;1&family=Manrope:wght@200..800&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik+80s+Fade&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<!-- FONTS -->
+		<link rel="preload" href="assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
 	</head>
-	<body>
-		<header>
-			<h1>Hye Lynn Suh | Typography & Interaction</h1>
-			<img src="imgs/smth.jpg">
+	<body class="neue">
+		<header class="navbar">
+			<a href="#" class="logo">
+				<img src="assets/black-logo.gif">
+			</a>
+			<input class="side-menu" type="checkbox" id="side-menu">
+			<label class="hamb" for="side-menu">
+				<span class="hamb-line"></span>
+			</label>
+			<nav class="nav">
+				<ul class="menu">
+					<li>
+						<a href="www.hyelynnsuh.github.io/design/">work</a>
+					</li>
+					<li>
+						<a href="pages/about.html">about</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
+
 		<main>
-			<intro id="intro">
-				<p>
-					Hello! Welcome to my world of code.
-				</p>
-			</intro>
-			<section class="bio">
-				<p class="me">
-					Hye Lynn Suh is a product designer (and aspiring coder) based in NYC. She currently attends Parsons at The New School as a Masters Candidate of Communication Design. 
+			<section id="intro">
+				<p class="name-subtext left-def">portfolio</p>
+				<h1 class="name">hye lynn suh</h1>
+				<div class="wrapper">
+					<div class="words">
+						<span class="flip">product designer</span>
+						<span class="flip">aspiring coder</span>
+						<span class="flip">music lover</span>
+						<span class="flip">motion designer</span>
+						<span class="flip">service designer</span>
+						<span class="flip">product designer</span>
+					</div>
+					<p class="name-subtext right-def">based in nyc</p>
+				</div>
+				<div class="crop-marks"></div>
+			</section>
+			<div class="player">
+				<div class="turntable-container">
+					<img class="turntable" src="assets/player.png">
+					<div class="main-turn">
+						<img class="vinyl" src="assets/vinyl.png">
+						<div class="center-label"></div>
+					</div>
+				</div>
+			</div>
+			<section id="super-power">
+				<h3 class="super-power">
+					making structured design feel <span class="circle">natural,</span> <span class="circle">emotional,</span> and profoundly <span class="circle">human</span>
+				</h3>
+				<p class="cta">
+					see my projects down below
 				</p>
 			</section>
-			<div class="project-container">
-				<!-- Project 1 -->
-				<section id="proj-one">
-					<h2>
-						<a href="https://hyelynnsuh.github.io/manuscript/">
-							Project 1: Manuscript
+			<section id="product-design">
+				<h2 class="design-type">web design</h2>
+				<ul class="project-grid">
+					<li class="glass-card">
+						<a href="https://hyelynnsuh.github.io/functions/">
+							<img class="pre-cover posty-cover" src="assets/posty-preview.png">
+							<div class="proj-preview">
+								<h4 class="proj-type">functions</h4>
+								<h3 class="proj-name">what should hye lynn eat?</h3>
+								<p class="preview-desc">an interactive web app that helps users decide what to eat by filtering through a curated list of meals </p>
+								<button class="see-more"></button>
+							</div>
 						</a>
-					</h2>
-				</section>
-				<!-- Project 2 -->
-				<section id="proj-2">
-					<h2>
-						<a href="https://hyelynnsuh.github.io/spread/">
-							Project 2: Spread
+					</li>
+					<li class="glass-card">
+						<a href="https://hyelynnsuh.github.io/links/" class="project">
+							<img class="pre-cover" src="assets/links.png">
+							<div class="proj-preview">
+								<h4 class="proj-type">links</h4>
+								<h3 class="proj-name">links</h3>
+								<p class="preview-desc">a responsive website of a collection of push buttons in media</p>
+							</div>
 						</a>
-					</h2>
-				</section>
-				<!-- Project 3 -->
-				<section id="proj-3">
-					<h2>
-						<a href="https://hyelynnsuh.github.io/binding/">
-							Project 3: Binding
+					</li>
+				</ul>
+			</section>
+			<section id="visual-design">
+				<h2 class="design-type">visual design</h2>
+				<ul class="project-grid">
+					<li class="glass-card">
+						<a class="project">
+							<img class="pre-cover" src="assets/ZINE_WHITE.gif" id="spotify">
+							<div class="proj-preview">
+								<div class="mult-types">
+									<h4 class="proj-type">print design</h4>
+									<h4 class="proj-type">motion graphics</h4>
+								</div>
+								<h3 class="proj-name">spotify x gasp</h3>
+								<p class="preview-desc">collaborated with Spotify Frequency to create a zine celebrating artists of color for Black History Month</p>
+								<button class="see-more"></button>
+							</div>
 						</a>
-					</h2>
-				</section>
-				<!-- Project 4 -->
-				<section id="proj-4">
-					<h2>
-						<a>
-							Project 4: Links
+					</li>
+					<li class="glass-card">
+						<a class="project">
+							<img class="pre-cover" src="assets/basketbuddies.png">
+							<div class="proj-preview">
+								<h4 class="proj-type">game design</h4>
+								<h3 class="proj-name"> project jonah</h3>
+								<p class="preview-desc">a video game start-up inspired by the story of jonah and the big whale</p>
+								<button class="see-more"></button>
+							</div>
 						</a>
-					</h2>
-				</section>
-			</div>
+					</li>
+					<li class="glass-card">
+						<a class="project">
+							<img class="pre-cover" src="assets/depop.png">
+							<div class="proj-preview">
+								<div class="mult-types">
+									<h4 class="proj-type">print design</h4>
+									<h4 class="proj-type">motion graphics</h4>
+								</div>
+								<h3 class="proj-name">gasp zine ed. 14</h3>
+								<p class="preview-desc">collaborated with David Lachapelle to create GASP's 14th edition</p>
+								<button class="see-more"></button>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
 		</main>
+		<footer>
+			<div class="footer">
+				<p class="footer-info credits">&copy; hye lynn suh, 2025</p>
+				<div class="socials">
+					<a class="footer-info">linkedin</a>
+					<a class="footer-info">email</a>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

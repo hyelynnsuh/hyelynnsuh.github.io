@@ -1,0 +1,114 @@
+:root {
+	--gray: #6c6c6c;
+}
+
+* {
+	font-weight: 350;
+}
+
+.pic {
+	width: 15rem;
+	margin: auto;
+}
+
+.polaroid {
+	display: flex;
+	flex-direction: column;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: var(--margin);
+}
+
+.polaroid {
+	margin-bottom: var(--margin);
+}
+
+h2, h3 {
+	font-size: calc(var(--font-size)*2);
+	font-family: var(--bolded);
+}
+
+.quality {
+	color: var(--gray);
+	font-style: italic;
+}
+
+.hyelynn {
+	max-width: 20rem;
+	margin: auto;
+}
+
+.about-name {
+	margin-bottom: var(--padding);
+}
+
+.who {
+	padding-left: var(--padding);
+	margin-bottom: var(--margin);
+}
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+video {
+	width: 19rem;
+	margin: auto;
+}
+
+.playlists {
+	object-fit: cover;
+}
+
+.playlists-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	gap: 1rem;
+	margin-top: var(--margin);
+}
+
+.album-names {
+	/* font-weight: 500;
+	border: solid 1px var(--black);
+	border-radius: var(--border-radius);
+	padding: calc(var(--padding)/1.9);
+	width: fit-content; */
+	text-decoration: underline;
+}
+
+.album-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.music {
+	font-size: calc(var(--font-size)*1.2);
+	background: var(--black);
+	color: var(--white);
+	padding: var(--padding);
+	
+}
+
+@media (min-width: 800px) {
+	.about-page {
+		width: 36rem;
+		margin: auto;
+	}
+
+	.hyelynn {
+		max-width: 36rem;
+	}
+
+	.pic {
+		width: 20rem;
+	}
+
+}
