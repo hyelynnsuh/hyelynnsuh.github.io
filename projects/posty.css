@@ -94,6 +94,14 @@ section {
 }
 
 
+/* MEET POSTY */
+.meet-posty {
+	border-radius: var(--border-radius);
+	border: solid 1px var(--posty-green);
+	overflow: hidden;
+}
+
+
 /* RESEARCH */
 .prelim {
 	border: solid 1px var(--posty-green);
@@ -280,4 +288,6 @@ video {
 	.play-button {
 		width: 5%;
 	}
+
+	
 }

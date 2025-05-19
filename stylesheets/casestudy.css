@@ -520,6 +520,28 @@
 		padding-right: calc(var(--padding)*.5);
 	}
 
+	/* JTBD */
+	.jtbd {
+		flex-direction: row;
+		gap: calc(var(--gap)*1.5);
+	}
+
+	.jtbd-title {
+		padding: calc(var(--padding)*1.5);
+		padding-right: 0;
+	}
+
+	.box-line {
+		height: 100%;
+		width: 1px;
+		border: none;
+		padding: 0;
+	}
+	
+	.jtbd > p {
+		padding: calc(var(--padding)*1.5);
+		padding-left: 0;
+	}
 
 	/* SECTION */
 	section {
@@ -546,6 +568,7 @@
 		font-size: calc(var(--font-size)*1.5);
 	}
 
+	
 
 	/* SLIDER */
 
