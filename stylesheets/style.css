@@ -389,24 +389,28 @@
 
 /* LAPTOP BREAKPOINT */
 @media (min-width: 1200px) {
+	main {
+		margin-top: calc(var(--margin)*2.2);
+	}
+
 	/* HERO TEXT */
 	.name {
-		font-size: calc(var(--font-size)*8.5);
+		font-size: calc(var(--font-size)*6.5);
 		min-width: 50rem;
 		margin: auto;
 	}
 	
 	.name-subtext {
 		width: fit-content;
-		font-size: calc(var(--font-size)*2);
+		font-size: calc(var(--font-size)*1.6);
 	}
 
 	.flip {
-		font-size: calc(var(--font-size)*2);
+		font-size: calc(var(--font-size)*1.6);
 	}
 
 	.words {
-		height: 2rem;
+		height: 1.6rem;
 	}
 
 	.left-def {
@@ -414,14 +418,14 @@
 	}
 
 	.wrapper {
-		margin-left: calc(var(--margin)*10);
+		margin-left: calc(var(--margin)*15);
 		height: 2rem;
 	}
 
 	#intro {
 		width: 50rem;
 		margin: auto;
-		margin-bottom: calc(var(--margin)*3);
+		margin-bottom: calc(var(--margin)*2);
 	}
 
 	@keyframes spin_words {
@@ -430,23 +434,23 @@
 		}
 	
 		20% {
-			transform: translateY(-120%);
+			transform: translateY(-122%);
 		}
 	
 		40% {
-			transform: translateY(-220%);
+			transform: translateY(-222%);
 		}
 	
 		60% {
-			transform: translateY(-320%);
+			transform: translateY(-322%);
 		}
 	
 		80% {
-			transform: translateY(-420%);
+			transform: translateY(-422%);
 		}
 	
 		100% {
-			transform: translateY(-520%);
+			transform: translateY(-522%);
 		}
 
 		
@@ -489,7 +493,7 @@
 
 	/* PROJECTS */
 	.design-type {
-		max-width: 40rem;
+		max-width: 50rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -498,7 +502,8 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: var(--gap);
-		max-width: 40rem;
+		justify-content: space-between;
+		max-width: 50rem;
 		margin: auto;
 	}
 

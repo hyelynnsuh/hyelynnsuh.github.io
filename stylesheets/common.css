@@ -56,7 +56,6 @@ header {
 	padding-bottom: calc(var(--padding)/1.4);
 	margin-bottom: var(--margin);
 	padding-left: var(--padding);
-	box-shadow: 0px 4px 4px -2px var(--shadow);
 	background-color: var(--white);
 	top: 0;
 	z-index: 100;
@@ -217,5 +216,43 @@ footer {
 
 	footer {
 		padding: calc(var(--padding)*2);
+	}
+}
+
+/* 1000PX */
+@media(min-width: 1200px) {
+	/* NAV */
+	.hamb, .side-menu {
+		display: none;
+	}
+
+	.nav {
+		all: unset;
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		justify-content: flex-end;
+		margin-right: var(--margin);
+	}
+
+	.menu {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.menu a {
+		padding: 0;
+		color: var(--black);
+		font-weight: bold;
+		background: none;
+		text-decoration: underline;
+	}
+
+	.menu a:hover {
+		color: var(--white);
+		/* background-color: var(--white);
+		border: 1px solid var(--black);
+		padding: calc(var(--padding)/5);
+		border-radius: calc(var(--border-radius)*2); */
 	}
 }
