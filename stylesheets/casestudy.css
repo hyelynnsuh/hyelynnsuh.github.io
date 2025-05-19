@@ -176,6 +176,11 @@
 /* APP BACKGROUND */
 .subheader {
 	font-size: calc(var(--font-size)*1.3);
+	border: 1px solid var(--black);
+	border-radius: calc(var(--border-radius)*2);
+	padding: var(--padding);
+	width: fit-content;
+	margin: auto;
 }
 
 .app-bg {
@@ -415,7 +420,6 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-
 
 /* 800PX */
 @media (min-width: 800px) {
