@@ -263,6 +263,25 @@
 	text-align: center;
 }
 
+/* JTBD */
+.jtbd {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap);
+	border-radius: var(--border-radius);
+}
+
+.jtbd-title {
+	padding-top: var(--padding);
+}
+
+.jtbd > p {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+	padding-bottom: var(--padding);
+}
+
 /* RESEARCH */
 .prelim {
 	display: flex;
