@@ -71,7 +71,20 @@ section {
 
 /* PROBLEM */
 .discovery {
+	background-color: var(--trans-blue);
+	border: 1px solid var(--blue);
+}
+
+.problem {
+	color: var(--black);
+}
+
+.pro-line {
+	width: 100%;
+	height: 1px;
 	background-color: var(--blue);
+	border: none;
+	padding: 0;
 }
 
 .jtbd {
@@ -177,6 +190,70 @@ section {
 	font-size: calc(var(--font-size)*1.2);
 }
 
+/* POLAROID */
+.win {
+	width: 40%;
+}
+
+/* LEARNINGS */
+.learn {
+	font-size: calc(var(--font-size)*1.5);
+	font-family: var(--bolded);
+	color: var(--orange);
+	text-align: center;
+	padding: calc(var(--padding)*1.4);
+}
+
+.crops {
+	position: relative;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+}
+
+.crops::before, .crops::after {
+	content: "";
+	position: absolute;
+	border-style: solid;
+	width: 20px;
+	height: 25px;
+	border-color: var(--orange);
+}
+
+.crops::before {
+	top: 0;
+	left: 0;
+	border-width: 1px 0 0 1px;
+}
+
+.crops::after {
+	top: 0;
+	right: 0;
+	border-width: 1px 1px 0 0;
+}
+
+.marks::before, .marks::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	border-style: solid;
+	border-color: var(--orange);
+}
+
+.marks::before {
+	bottom: 0;
+	left: 0;
+	border-width: 0 0 1px 1px;
+	border-color: var(--orange);
+}
+
+.marks::after {
+	bottom: 0;
+	right: 0;
+	border-width: 0 1px 1px 0;
+	border-color: var(--orange);
+}
+
 
 /* VIDEOS */
 video {
@@ -263,4 +340,21 @@ video {
 		object-fit: cover;
 	}
 	
+
+	.story-imgs {
+		display: flex;
+		gap: var(--gap);
+
+		img {
+			width: 30%;
+		}
+	}
+
+
+
+	.win-flex {
+		display: flex;
+		align-items: center;
+		gap: var(--gap);
+	}
 }
