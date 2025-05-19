@@ -135,6 +135,12 @@
 	font-family: var(--bolded);
 }
 
+.block {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+}
+
 
 /* PROGRESS BAR */
 .side-bar {
@@ -415,6 +421,10 @@
 @media (min-width: 800px) {
 	p {
 		line-height: var(--lineheight);
+	}
+
+	.block-flex {
+		gap: 2rem;
 	}
 
 	/* HERO */
