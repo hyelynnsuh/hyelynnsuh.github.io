@@ -390,7 +390,7 @@
 /* LAPTOP BREAKPOINT */
 @media (min-width: 1200px) {
 	main {
-		margin-top: calc(var(--margin)*2.2);
+		margin-top: calc(var(--margin)*1.5);
 	}
 
 	/* HERO TEXT */

@@ -222,6 +222,16 @@ footer {
 /* 1000PX */
 @media(min-width: 1200px) {
 	/* NAV */
+	.logo {
+		margin-left: calc(var(--margin)*2);
+	}
+
+	.navbar {
+		width: 100%;
+		margin: auto;
+		padding: calc(var(--padding)*1.2);
+	}
+
 	.hamb, .side-menu {
 		display: none;
 	}
@@ -232,7 +242,7 @@ footer {
 		gap: 2rem;
 		align-items: center;
 		justify-content: flex-end;
-		margin-right: var(--margin);
+		margin-right: calc(var(--margin)*2);
 	}
 
 	.menu {
