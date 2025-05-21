@@ -195,26 +195,90 @@
 	background-color: var(--black);
 	padding: calc(var(--padding)*2);
 	margin-top: calc(var(--margin)*2);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--gap)*1.7);
 }
 
 .super-power {
+	position: relative;
 	font-size: calc(var(--font-size)*1.2);
 	color: var(--white);
 	text-align: center;
-	/* background-color: var(--transparent-white);
-	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-	border-radius: var(--border-radius);
-	backdrop-filter: blur(4px);
-	border: 1px solid var(--thin-shadow); */
-
-	background: rgba(255, 255, 255, 0.526);
+	/* background: rgba(255, 255, 255, 0.526);
 	box-shadow: 0 8px 32px 0 var(--transparent-white);
 	backdrop-filter: blur( 4px );
-	-webkit-backdrop-filter: blur(40px);
+	-webkit-backdrop-filter: blur(40px); */
 	border-radius: 10px;
-	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 	padding: var(--padding);
+	line-height: calc(var(--lineheight)*2);
+
 }
+
+#super-wrapper {
+	position: relative;
+	margin: auto;
+}
+
+
+#super-wrapper::before, #super-wrapper::after {
+	content: '';
+	position: absolute;
+	border-color: var(--white);
+	border-style: solid;
+	width: 20px;
+	height: 25px;
+}
+
+#super-wrapper::before {
+	top: 0;
+	left: 0;
+	border-width: .5px 0 0 .5px;
+}
+
+#super-wrapper::after {
+	top: 0;
+	right: 0;
+	border-width: .5px .5px 0 0;
+}
+
+.dark-crops::before, .dark-crops::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	border-color: var(--white);
+	border-style: solid;
+}
+
+.dark-crops::before {
+	bottom: 0;
+	left: 0;
+	border-width: 0 0 .5px .5px;
+}
+
+.dark-crops::after {
+	bottom: 0;
+	right: 0;
+	border-width: 0 .5px .5px 0;
+}
+
+.circle {
+	border: solid 1px var(--white);
+	border-radius: calc(var(--border-radius)*2);
+	padding: calc(var(--padding)/1.5);
+	color: var(--white);
+}
+
+.cta {
+	color: var(--white);
+	text-align: center;
+}
+
+
+
 
 
 /* PROJECTS */
@@ -469,8 +533,12 @@
 
 
 	/* SUPERPOWER */
+	#super-power {
+		padding: calc(var(--padding)*3);
+	}
+
 	.super-power {
-		max-width: 70rem;
+		max-width: 62rem;
 		margin: auto;
 		padding: calc(var(--padding)*2);
 		font-size: calc(var(--font-size)*1.6);
