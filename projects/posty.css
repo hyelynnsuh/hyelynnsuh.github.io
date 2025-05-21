@@ -358,3 +358,72 @@ video {
 		gap: var(--gap);
 	}
 }
+
+
+/* 1200px */
+@media (min-width: 1200px) {
+	
+	.case-subtext {
+		width: 31rem;
+		align-self: self-end;
+	}
+
+	.main-content {
+		padding: 0;
+	}
+
+	video {
+		width: 36rem;
+	}
+
+	.play-next {
+		max-width: 36rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: calc(var(--margin)*2);
+	}
+
+	.play-button {
+		width: 5%;
+	}
+
+
+	/* STEPS */
+	.steps {
+		width: 50rem;
+		justify-content: space-between;
+		padding: calc(var(--padding)*2);
+	}
+
+	.steps-flex {
+		width: 25rem;
+	}
+
+	.steps-item {
+		font-size: calc(var(--font-size)*1.5);
+	}
+
+	.img-span {
+		width: 30%;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+	}
+	
+
+	.story-imgs {
+		display: flex;
+		gap: var(--gap);
+
+		img {
+			width: 30%;
+		}
+	}
+
+
+
+	.win-flex {
+		display: flex;
+		align-items: center;
+		gap: var(--gap);
+	}
+}
