@@ -141,9 +141,12 @@
 	gap: var(--gap);
 }
 
-
-/* PROGRESS BAR */
 .side-bar {
+	display: none;
+}
+
+/* PROGRESS BAR
+/* .side-bar {
 	display: flex;
 	justify-content: space-evenly;
 	background-color: var(--white);
@@ -170,12 +173,12 @@
 	height: 0.1rem;
 	background-color: var(--black);
 	align-self: center;
-}
+} */ 
 
 
 /* APP BACKGROUND */
 .subheader {
-	font-size: calc(var(--font-size)*1.3);
+	/* font-size: calc(var(--font-size)*1.3); */
 	border: 1px solid var(--black);
 	border-radius: calc(var(--border-radius)*2);
 	padding: var(--padding);
@@ -252,6 +255,10 @@
 
 
 /* PROBLEM */
+#discovery {
+	padding-top: var(--padding);
+}
+
 .discovery {
 	border-radius: var(--border-radius);
 	display: flex;
@@ -261,12 +268,12 @@
 
 .problem {
 	text-align: center;
-	font-size: calc(var(--font-size)*1.3);
 }
 
 .pro-descr {
 	padding-left: var(--padding);
 	padding-right: var(--padding);
+	padding-bottom: var(--padding);
 }
 
 .pro-line {
@@ -520,6 +527,12 @@
 	}
 
 
+	/* SUBHEADERS */
+	.subheader {
+		font-size: calc(var(--font-size)*1.3);
+	}
+
+
 	/* GOAL */
 	#bg {
 		margin-top: var(--margin);
@@ -540,6 +553,10 @@
 		font-size: calc(var(--font-size)*1.6);
 		padding-left: calc(var(--padding)*.4);
 		padding-right: calc(var(--padding)*.5);
+	}
+
+	.pro-descr {
+		padding-bottom: 0;
 	}
 
 	/* JTBD */

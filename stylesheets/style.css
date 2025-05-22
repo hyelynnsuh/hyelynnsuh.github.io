@@ -535,6 +535,7 @@
 	/* SUPERPOWER */
 	#super-power {
 		padding: calc(var(--padding)*3);
+		margin-top: calc(var(--margin)*3.5);
 	}
 
 	.super-power {

@@ -255,3 +255,124 @@ video {
 		width: 5%;
 	}
 }
+
+/* 1200px */
+@media (min-width: 1200px) {
+	/* ALL PARAGRAPHS IN MAIN CONTENT */
+	.info {
+		width: 45rem;
+	}
+
+	/* HERO */
+	/* VINYL COVER */
+	.tiny-vinyl::before {
+		content: "";
+		width: 100px;
+		height: 100px;
+		background: url("casefiles/depop.png") center/cover no-repeat;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.main-content {
+		display: flex;
+		width: 70rem;
+		justify-content: space-between;
+		margin-top: calc(var(--margin)*3);
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.side-bar {
+		display: contents;
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		justify-content: center;
+		gap: var(--gap);
+		width: 7rem;
+	}
+
+	.side {
+		width: 15rem;
+	}
+
+	/* TURNTABLE */
+	.side-table {
+		width: 7rem;
+		height: 7rem;
+		background: #333;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: inset 1px 2px 2px 4px var(--shadow), 0px 5px 15px rgba(0, 0, 0, 0.5);
+		border-radius: calc(var(--border-radius)/2);
+		z-index: -20;
+		align-self: left;
+	}
+
+	.side-platter {
+		width: 90px;
+		height: 90px;
+		background: radial-gradient(circle, #a9a9a9 20%, #000);
+		border-radius: 50%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.side-vinyl {
+		width: 80px;
+		height: 80px;
+		background: radial-gradient(circle, #111 10%, #222 40%, black);
+		border-radius: 50%;
+		position: relative;
+		animation: spin 3s linear infinite;
+		justify-self: center;
+		align-self: center;
+		margin-top: calc(var(--padding)/2.8);
+	}
+
+	.side-vinyl::before {
+		content: "";
+		width: 50px;
+		height: 50px;
+		background: url("casefiles/depop.png") center/cover no-repeat;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.sticky-side {
+		display: flex;
+		flex-direction: column;
+		position: sticky;
+		top: 10rem;
+		gap: calc(var(--gap)*2);
+	}
+
+	.progress {
+		color: var(--shadow);
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.progress:hover {
+		color: var(--red);
+	}
+
+}
