@@ -192,7 +192,7 @@
 
 /* SUPERPOWER */
 #super-power {
-	background-color: var(--white);
+	background-color: var(--black);
 	padding: calc(var(--padding)*2);
 	margin-top: calc(var(--margin)*2);
 	position: relative;
@@ -204,7 +204,7 @@
 .super-power {
 	position: relative;
 	font-size: calc(var(--font-size)*1.2);
-	color: var(--black);
+	color: var(--white);
 	text-align: center;
 	/* background: rgba(255, 255, 255, 0.526);
 	box-shadow: 0 8px 32px 0 var(--transparent-white);
@@ -214,6 +214,7 @@
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 	padding: var(--padding);
 	line-height: calc(var(--lineheight)*2);
+	border: solid 1px var(--white);
 
 }
 
@@ -226,7 +227,7 @@
 #super-wrapper::before, #super-wrapper::after {
 	content: '';
 	position: absolute;
-	border-color: var(--black);
+	border-color: var(--white);
 	border-style: solid;
 	width: 20px;
 	height: 25px;
@@ -249,7 +250,7 @@
 	position: absolute;
 	width: 20px;
 	height: 25px;
-	border-color: var(--black);
+	border-color: var(--white);
 	border-style: solid;
 }
 
@@ -266,14 +267,14 @@
 }
 
 .circle {
-	border: solid 1px var(--black);
+	border: solid 1px var(--white);
 	border-radius: calc(var(--border-radius)*2);
 	padding: calc(var(--padding)/1.5);
-	color: var(--black);
+	color: var(--white);
 }
 
 .cta {
-	color: var(--black);
+	color: var(--white);
 	text-align: center;
 }
 
