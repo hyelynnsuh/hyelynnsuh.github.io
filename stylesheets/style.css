@@ -355,6 +355,10 @@
 	mix-blend-mode: luminosity;
 }
 
+.enter {
+	display: none;
+}
+
 @media (min-width: 800px) {
 
 	/* HERO TEXT */
@@ -458,8 +462,17 @@
 	}
 
 	/* HERO TEXT */
+	#intro-container {
+		display: flex;
+		flex-direction: column;
+		gap: calc(var(--gap)*2);
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10rem;
+	}
+
 	.name {
-		font-size: calc(var(--font-size)*8.5);
+		font-size: calc(var(--font-size)*9.5);
 		min-width: 40rem;
 		margin: auto;
 	}
@@ -486,12 +499,28 @@
 		height: 2rem;
 	}
 
+	.enter {
+		display: inline-block;
+		font-size: calc(var(--font-size)*1.3);
+		padding: var(--padding);
+		border: solid 1px var(--black);
+		border-radius: calc(var(--border-radius)/1.4);
+		cursor: pointer;
+	}
+
+	.enter:hover {
+		background-color: var(--black);
+		color: var(--white);
+	}
+
 	#intro {
 		width: 55rem;
-		margin: auto;
-		margin-bottom: calc(var(--margin)*2);
+		/* margin-bottom: calc(var(--margin)*2); */
+		margin-top: calc(var(--margin)*2);
 		padding: calc(var(--padding)*1.3);
+		align-self: center;
 	}
+
 
 	@keyframes spin_words {
 		0% {
@@ -566,7 +595,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 20rem;
+		/* margin-top: 20rem; */
 	}
 
 	.player {
