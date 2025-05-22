@@ -2,6 +2,7 @@
 :root {
 	--red: #E20020;
 	--light-red: #8f1525;
+	--trans-red: #e2001ea9; 
 }
 
 
@@ -64,7 +65,20 @@ section {
 
 /* PROBLEM */
 .discovery {
+	background-color: var(--trans-red);
+	border: 1px solid var(--red);
+}
+
+.problem {
+	color: var(--black);
+}
+
+.pro-line {
+	width: 100%;
+	height: 1px;
 	background-color: var(--red);
+	border: none;
+	padding: 0;
 }
 
 
@@ -267,8 +281,8 @@ video {
 	/* VINYL COVER */
 	.tiny-vinyl::before {
 		content: "";
-		width: 100px;
-		height: 100px;
+		width: 80px;
+		height: 80px;
 		background: url("casefiles/depop.png") center/cover no-repeat;
 		position: absolute;
 		top: 50%;
@@ -373,6 +387,25 @@ video {
 
 	.progress:hover {
 		color: var(--red);
+	}
+
+
+	/* ACTUAL CONTENT */
+	/* PROBELM */
+	#discovery {
+		padding-top: 0;
+	}
+
+	.discovery {
+		border: 2px solid var(--red);
+	}
+
+	.pro-line {
+		height: 2px;
+	}
+
+	.problem {
+		margin: auto;
 	}
 
 }

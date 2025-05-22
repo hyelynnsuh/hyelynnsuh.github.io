@@ -192,7 +192,7 @@
 
 /* SUPERPOWER */
 #super-power {
-	background-color: var(--black);
+	background-color: var(--white);
 	padding: calc(var(--padding)*2);
 	margin-top: calc(var(--margin)*2);
 	position: relative;
@@ -204,7 +204,7 @@
 .super-power {
 	position: relative;
 	font-size: calc(var(--font-size)*1.2);
-	color: var(--white);
+	color: var(--black);
 	text-align: center;
 	/* background: rgba(255, 255, 255, 0.526);
 	box-shadow: 0 8px 32px 0 var(--transparent-white);
@@ -226,7 +226,7 @@
 #super-wrapper::before, #super-wrapper::after {
 	content: '';
 	position: absolute;
-	border-color: var(--white);
+	border-color: var(--black);
 	border-style: solid;
 	width: 20px;
 	height: 25px;
@@ -249,7 +249,7 @@
 	position: absolute;
 	width: 20px;
 	height: 25px;
-	border-color: var(--white);
+	border-color: var(--black);
 	border-style: solid;
 }
 
@@ -266,14 +266,14 @@
 }
 
 .circle {
-	border: solid 1px var(--white);
+	border: solid 1px var(--black);
 	border-radius: calc(var(--border-radius)*2);
 	padding: calc(var(--padding)/1.5);
-	color: var(--white);
+	color: var(--black);
 }
 
 .cta {
-	color: var(--white);
+	color: var(--black);
 	text-align: center;
 }
 
@@ -524,7 +524,7 @@
 
 	/* RECORD PLAYER */
 	.turntable-container {
-		width: 40rem;
+		width: 25rem;
 	}
 
 	.main-turn {
@@ -533,13 +533,15 @@
 
 
 	/* SUPERPOWER */
+
+
 	#super-power {
 		padding: calc(var(--padding)*3);
-		margin-top: calc(var(--margin)*3.5);
+		/* margin-top: calc(var(--margin)*3.5); */
 	}
 
 	.super-power {
-		max-width: 62rem;
+		max-width: 40rem;
 		margin: auto;
 		padding: calc(var(--padding)*2);
 		font-size: calc(var(--font-size)*1.6);
@@ -549,15 +551,26 @@
 	}
 
 	.circle {
-		border: solid 1px var(--white);
+		border: solid 1px var(--black);
 		border-radius: calc(var(--border-radius)*2);
 		padding: calc(var(--padding)/1.5);
-		color: var(--white);
+		color: var(--black);
 	}
 
 	.cta {
-		color: var(--white);
+		color: var(--black);
 		text-align: center;
+	}
+
+	.super-turn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20rem;
+	}
+
+	.player {
+		transform: rotate(0);
 	}
 
 
@@ -579,5 +592,9 @@
 
 	.project {
 		max-width: 19rem;
+	}
+
+	#product-design {
+		margin-top: calc(var(--margin)*3.5);
 	}
 }
