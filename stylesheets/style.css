@@ -355,9 +355,10 @@
 	mix-blend-mode: luminosity;
 }
 
-.enter {
+.enter, .big-turn {
 	display: none;
 }
+
 
 @media (min-width: 800px) {
 
@@ -462,6 +463,21 @@
 	}
 
 	/* HERO TEXT */
+	.intro-flex {
+		display: flex;
+	}
+
+	#intro::before {
+		border-color: var(--black);
+		border-width: 1px 0px 0px 1px;
+	}
+
+	.crop-marks::before {
+		border-color: var(--black);
+		border-width: 0 0 1px 1px;
+	}
+
+
 	#intro-container {
 		display: flex;
 		flex-direction: column;
@@ -469,13 +485,16 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 10rem;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.name {
-		font-size: calc(var(--font-size)*9.5);
+		font-size: calc(var(--font-size)*10.5);
 		min-width: 40rem;
 		margin: auto;
 	}
+
 	
 	.name-subtext {
 		width: fit-content;
@@ -495,7 +514,7 @@
 	}
 
 	.wrapper {
-		margin-left: calc(var(--margin)*18);
+		margin-left: calc(var(--margin)*20);
 		height: 2rem;
 	}
 
@@ -514,9 +533,9 @@
 	}
 
 	#intro {
-		width: 55rem;
+		width: 65rem;
 		/* margin-bottom: calc(var(--margin)*2); */
-		margin-top: calc(var(--margin)*2);
+		margin-top: calc(var(--margin)*4);
 		padding: calc(var(--padding)*1.3);
 		align-self: center;
 	}
@@ -552,13 +571,59 @@
 
 
 	/* RECORD PLAYER */
-	.turntable-container {
+	/* .turntable-container {
 		width: 25rem;
 	}
 
-	.main-turn {
+	.big-turn {
 		margin-left: 4rem;
+		display: contents;
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		width: 50%;
+		height: auto;
+		height: auto;
+		transform: translate(-50%, -50%);
+		animation: bigspin 5s linear infinite;
+		margin-left: 2rem;
+		margin-bottom: 3.6rem;
 	}
+
+	
+	.big-vinyl {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+		background-color: black;
+	}
+	
+	.big-center-label {
+		overflow: hidden;
+	
+	}
+	
+	.big-center-label::before {
+		content: "";
+		width: 35%;
+		height: 35%;
+		background: url("../assets/profile.jpg") center/cover no-repeat;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-45%, -50%);
+		overflow: hidden;
+		border-radius: 50%;
+	}
+
+	@keyframes bigspin {
+		from {
+			transform: translate(-50%,-50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
+	} */
 
 
 	/* SUPERPOWER */

@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		lastScrollTop = scrollTop
 	})
+
+	// SCROLL UP 1200PX 
+	const slideUpButton = document.getElementById('slideUp')
+	const targetSection = document.querySelector('.super-turn')
+
+	slideUpButton.addEventListener('click', () => {
+		targetSection.scrollIntoView({
+			behavior: 'smooth'
+		})
+	})
 })
 
 
