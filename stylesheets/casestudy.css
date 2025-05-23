@@ -641,6 +641,10 @@
 
 /* 1200PX */
 @media (min-width: 1200px) {
+	.main-content {
+		margin-top: 6rem;
+	}
+
 	p {
 		line-height: var(--lineheight);
 	}
@@ -685,14 +689,15 @@
 	}
 
 
-	body {
-		font-size: calc(var(--font-size)*1.3);
+	body, .app-bg {
+		font-size: calc(var(--font-size)*1.1);
 	}
 
 	/* CASE INFO */
 	.case-description {
 		width: 35rem;
 		gap: .5rem;
+		justify-content: space-between;
 	}
 
 	.case-title {
@@ -741,8 +746,12 @@
 
 	/* GOAL */
 	.app-bg {
-		font-size: calc(var(--font-size)*1.4);
-		line-height: calc(var(--lineheight)*1.3);
+		font-size: calc(var(--font-size)*1.1);
+		line-height: calc(var(--lineheight)*1.1);
+	}
+
+	#bg {
+		margin-top: 5rem;
 	}
 
 	#goal {
@@ -813,8 +822,9 @@
 	}
 
 	.info {
-		font-size: calc(var(--font-size)*1.3);
-		line-height: calc(var(--lineheight)*1.3);
+		width: 50rem;
+		font-size: calc(var(--font-size)*1.1);
+		line-height: calc(var(--lineheight)*1.1);
 	}
 
 

@@ -432,10 +432,15 @@ video {
 	}
 
 
-
 	.win-flex {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		gap: var(--gap);
+	}
+
+	.win {
+		width: 50%;
+		align-self: center;
 	}
 }
