@@ -81,6 +81,28 @@ section {
 	padding: 0;
 }
 
+.jtbd {
+	border: solid 1px var(--red);
+	background-color: var(--trans-red);
+}
+
+.jtbd-title {
+	color: var(--red);
+}
+
+.box-line {
+	width: 100%;
+	height: 1px;
+	background-color: var(--red);
+	border: none;
+	padding: 0;
+}
+
+.jtbd > p {
+	text-align: center;
+}
+
+
 
 /* RESEARCH */
 .prelim {
@@ -222,6 +244,39 @@ video {
 	height: 4px;
 	background: var(--red);
 	z-index: 10000;
+}
+
+/* LEARNINGS */
+.learn {
+	color: var(--red);
+}
+
+.crops::before, .crops::after {
+	border-color: var(--red);
+}
+
+.marks::before, .marks::after {
+	border-color: var(--red);
+}
+
+.marks::before {
+	border-color: var(--red);
+}
+
+.marks::after {
+	border-color: var(--red);
+}
+
+
+.win-flex {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+	align-items: center;
+}
+
+.win {
+	width: 70%;
 }
 
 /* PLAY NEXT */
@@ -408,4 +463,80 @@ video {
 		margin: auto;
 	}
 
+	.jtbd {
+		width: 50rem;
+	}
+
+	.hmw {
+		width: 45rem;
+	}
+
+	.box-line {
+		height: 100%;
+		width: 1px;
+		border: none;
+		padding: 0;
+	}
+
+	/* HIFI */
+	.hifi {
+		width: 45rem;
+		margin: auto;
+		justify-content: space-between;
+	}
+
+	.hifi-info > p {
+		width: 27rem;
+	}
+
+	.hifi-info > h3 {
+		margin-left: 0;
+	}
+
+	.left-hifi {
+		flex-direction: row-reverse;
+	}
+
+	.hifi-vid {
+		border: 1px solid var(--black);
+		border-radius: var(--border-radius);
+		overflow: hidden;
+	}
+
+	.win-block {
+		width: 35rem;
+	}
+
+	/* PLAY NEXT */
+	.play-next {
+		border: solid 1px var(--black);
+		border-radius: var(--border-radius);
+		margin-right: 0;
+		padding: var(--padding);
+		margin-top: var(--margin);
+		width: fit-content;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	.play-next:hover {
+		background-color: var(--black);
+	}
+
+	.play-next:hover .next {
+		color: var(--white);
+	}
+
+	.play-next:hover .play-button {
+		filter: invert(1);
+	}
+
+	.next {
+		font-family: var(--bolded);
+		font-size: calc(var(--font-size)*1.5);
+	}
+
+	.play-button {
+		width: 35px;
+	}
 }

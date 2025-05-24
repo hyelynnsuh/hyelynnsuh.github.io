@@ -138,7 +138,17 @@
 							</p>
 						</div>
 					</div>
-					<div class="content-flex slider-flex">
+					<div class="content-flex">
+						<div class="jtbd">
+							<h3 class="bold jtbd-title">JTBD</h3>
+							<hr class="box-line" />
+							<p class="bold">When I open Depop to find second-hand fashion I love, I want to see clothes that reflect my personal style and values — so I can shop more confidently, creatively, and consciously.
+							</p>
+						</div>
+						<p class="info">I needed to design a solution that made users feel recognized — not just as shoppers, but as individuals.
+						</p>
+					</div>
+					<!-- <div class="content-flex slider-flex">
 						<div class="slider">
 							<div class="a-tags">
 								<a href="#target">
@@ -175,13 +185,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="content-flex">
 						<h3 class="subheader bold">
 							understanding user needs
 						</h3>
 						<p class="info">
-							To uncover user pain points, I conducted three user interviews with Depop's target audience (18-26 year olds), aiming to understand their experiences with trustworthiness and customization. I used an interview script with 30 open-ended questions centered around engagement, personalization, trust, and usability.
+							To go beyond assumptions, I conducted three in-depth interviews with Depop’s core audience: 18–26-year-olds who were regular or occasional users. I designed an interview script with over 30 open-ended questions focused on personalization, trust, shopping behavior, and emotional connection to the app.
 						</p>
 					</div>
 					<div class="content-flex">
@@ -209,24 +219,33 @@
 								</div>
 							</div>
 						</div>
+						<p class="info">These weren’t just feature gaps — they were emotional gaps. People weren’t converting because they weren’t connecting.
+						</p>
 					</div>
 					<div class="content-flex" >
 						<h3 class="subheader bold">
 							sketching
 						</h3>
 						<p class="info">
-							To explore potential solutions, I facilitated a brainstorming session with four other designers. We focused on the question: “How might we give users a more customizable experience?” This led to ideas for profile customization, an outfit generator, and enhanced search filters.
+							To build on these insights, I hosted a collaborative brainstorming session with four other designers. We anchored our session around a key question:
 						</p>
+						<div class="jtbd hmw">
+							<h3 class="bold jtbd-title hmw-title">HMW</h3>
+							<hr class="box-line hmw-line" />
+							<p class="bold">How might we make Depop feel like it was built for you?</p>
+						</div>
 						<video loop autoplay muted>
 							<source src="casefiles/depop-sketches.mov">
 						</video>
+						<p class="info">Ideas ranged from styling quizzes to avatar customization to mood-based outfit pairings. I distilled the strongest ones into three concept pillars: profile personalization, smart outfit generation, and dynamic, trust-building post previews.
+						</p>
 					</div>
 					<div class="content-flex">
 						<h3 class="subheader bold">
 							prototyping & user testing
 						</h3>
 						<p class="info">
-							Using Figma, I created mid-fidelity prototypes of the new features and conducted usability tests with three users who matched our target audience.
+							Using Figma, I created mid-fidelity prototypes that brought these ideas to life and tested them with three users. Watching them interact with the new features helped me spot friction points — some didn’t notice the outfit generator at first, while others wanted more control over filtering their results. These observations pushed me to refine not just the visuals, but the placement and hierarchy of each feature.
 						</p>
 						<video autoplay loop muted>
 							<source src="casefiles/depop-midfi.mp4">
@@ -239,22 +258,27 @@
 						<video autoplay muted>
 							<source src="casefiles/depop-popups.mp4">
 						</video>
+						<p class="info">
+							One of my biggest takeaways was that even the most exciting features need context. Users responded best when the interface made them feel in control — not just guided, but empowered.
+						</p>
 					</div>
 					<div class="content-flex">
 						<h3 class="subheader bold">
 							systems map
 						</h3>
 						<p class="info">
-							These insights inspired me to rebuild Depop's current systems map, including both the seller and buyer flows. After I synthesized my findings from the usability testing, I edited my system's map to visualize where my new features would fit inside their current existing flow.
+							I realized that introducing these features meant more than tacking on new screens — it meant rethinking Depop’s entire buyer flow. I rebuilt the system map to reflect both the seller and buyer journeys, and then layered in where the new features would live, how they’d connect, and what data they’d need to function. This helped me ensure that my additions weren’t disruptive, but integrated — supporting the app’s circular values while deepening engagement.
 						</p>
 						<img src="casefiles/systems.png">
 					</div>
 					<div class="content-flex">
 						<h3 class="subheader bold">
-							final design solutions
+							Introducing Depop: Styled By You
 						</h3>
 						<p class="info">
-							I crafted high-fidelity prototypes that aligned with Depop's brand message of “making fashion more circular.” Key features included:
+							At the heart of my solution is a belief: personalization doesn’t have to mean overcomplication. It can be as simple as asking the right questions, showing the right content, and helping users feel like they belong.
+						</p>
+						<p class="info">Here’s what I designed:
 						</p>
 					</div>
 					<div class="content-flex hifi">
@@ -263,67 +287,91 @@
 								the style finder quiz
 							</h3>
 							<p class="info">
-								a 5 step quiz completed immediately after creating an account. The quiz includes questions about the user’s preferred fashion styles, fit, brands, and colors.
+								A five-step quiz that appears right after sign-up. It asks users about their go-to styles, favorite fits, colors, brands, and even how they want their clothes to make them feel. It’s short, visual, and fun — and its answers power everything else.
 							</p>
 						</div>
 						<div class="hifi-vid">
 							<img loop src="casefiles/quiz.gif">
 						</div>
 					</div>
-					<div class="content-flex">
-						<h3 class="bold">
-							the outfit generator
-						</h3>
-						<p class="info">
-							generates different outfits based off of your preferences in the Style Finder Quiz. The result will show you links to the products shown on the avatar.
-						</p>
+					<div class="content-flex hifi left-hifi">
+						<div class="hifi-info">
+							<h3 class="subheader bold">
+								the outfit generator
+							</h3>
+							<p class="info">
+								Using the quiz data, this tool generates full outfits that align with user preferences. Each outfit is displayed on an avatar, with direct links to second-hand pieces currently available from sellers. It’s like having a Depop stylist, tailored to your taste.
+							</p>
+						</div>
 						<div class="hifi-vid">
 							<img loop src="casefiles/generator.gif">
 						</div>
 					</div>
-					<div class="content-flex">
-						<h3 class="bold">
-							pinpointed posts
-						</h3>
-						<p class="info">
-							Each piece of clothing has a tag that opens to a pop up, showing actual posts by sellers that are similar to the fit you generated. Here, you can quick save a post or go straight to the post.
-						</p>
+
+					<div class="content-flex hifi">
+						<div class="hifi-info">
+							<h3 class="subheader bold">
+								pinpointed posts
+							</h3>
+							<p class="info">
+								Each item in an outfit has a tag. Tap it, and a mini pop-up appears — showing similar real listings you can save or click into. It’s a bridge between inspiration and purchase, removing the friction of having to manually search for similar pieces.
+							</p>
+						</div>
 						<div class="hifi-vid">
 							<img loop src="casefiles/pinpoint.gif">
 						</div>
 					</div>
-					<div class="content-flex">
-						<h3 class="bold">
-							edge case
-						</h3>
-						<p class="info">
-							In case the user skips the onboarding quiz, they can edit their preferences manually on the home page to customize the outfits the generator creates. These filters will automatically apply to the user's search feed as well, reducing any repetitive actions.
-						</p>
+
+					<div class="content-flex hifi left-hifi">
+						<div class="hifi-info">
+							<h3 class="subheader bold">
+								edge case
+							</h3>
+							<p class="info">
+								If a user skips the onboarding quiz, they can always adjust their preferences manually on the homepage. These filters not only update the outfit generator, but also reshape the entire shopping feed — ensuring relevance without redundancy.
+							</p>
+						</div>
+						<div class="hifi-vid">
+							<img loop src="casefiles/errorstate-1.gif">
+						</div>
 					</div>
+					
 					<div class="content-flex">
-						<h3 class="bold">
+						<h3 class="subheader bold">
 							learnings
 						</h3>
 						<p class="info">
-							If I could do this project again, I would create more initial low-fi sketches exploring different features, play with some loading bar animations like Depop does on the current app, and lastly, interview sellers on Depop to understand the differences in the user journeys.
+							If I could go back, I would start with even scrappier sketches — exploring more layout options and onboarding moments before jumping into mid-fi. I’d also want to prototype with motion: Depop’s current app has playful loading bars and animations that add charm, and I’d love to explore how to build that personality into my flows. Finally, I’d expand research to include sellers — understanding their experience could uncover new ways to improve trust on both sides of the marketplace.
 						</p>
 					</div>
 					<div class="content-flex">
-						<h3 class="bold">
+						<h3 class="subheader bold">
 							next steps
 						</h3>
 						<p class="info">
-							For my next steps, I would like to explore my other insight which was user-seller trust, add more edge cases to my other features, and explore the generator concept further to have accurate and inclusive representation of all body types.
+							If I were to continue this project, my next focus would be on deepening buyer-seller trust. How might we show a seller’s history, values, or packaging practices upfront? I’d also push the outfit generator to be more inclusive — allowing users to select body types, cultural influences, or accessibility needs. Because style is never one-size-fits-all — and neither is good design.
 						</p>
+						<p class="info">
+							This project deepened my belief that good design balances structure with soul. By embedding personalization into Depop’s buyer flow, I made discovery feel more like self-expression than search. It reminded me that even in structured systems, we’re designing for people—real, emotional, human.
+						</p>
+						<div class="block win-block">
+							<div class="crops">
+								<h2 class="learn">good design balances structure with soul </h2>
+								<div class="marks"></div>
+							</div>
+						</div>
+					</div>
+					<div class="content-flex">
+						<a href="basketbuddies.html" class="play-next">
+							<button class="next">
+								play next
+							 </button>
+							 <img class="play-button" src="../assets/playnext.png">
+						</a>
 					</div>
 				 </section>
 			 </section>
-			 <a href="basketbuddies.html" class="play-next">
-				<button class="next">
-					play next
-				 </button>
-				 <img class="play-button" src="../assets/playnext.png">
-			</a>
+			 
 		</main>
 
 		<footer>
