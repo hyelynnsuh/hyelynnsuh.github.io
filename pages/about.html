@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Portfolio</title>
+		<title>About Hye Lynn</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../stylesheets/reset.css" rel="stylesheet">
 		<link href="../stylesheets/common.css" rel="stylesheet">
@@ -24,13 +24,13 @@
 			<nav class="nav">
 				<ul class="menu">
 					<li>
-						<a href="#product-design">work</a>
+						<a class="bolded-neue" href="#product-design">work</a>
 					</li>
 					<li>
-						<a>library</a>
+						<a class="bolded-neue">playground</a>
 					</li>
 					<li>
-						<a>about</a>
+						<a class="bolded-neue"><span class="highlight">about</span></a>
 					</li>
 				</ul>
 			</nav>
@@ -82,19 +82,36 @@
 					</div>
 				</div>
 			</section>
+			<img src="../assets/skills.png">
 			<div class="album-container">
-				<h3 class="music">
-					what's always on repeat...
-				</h3>
-				<div class="playlists-container">
-					<a class="album-names" href="https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW?si=l0w9EuzTRBaBJ0kOfYT6lA">gnx</a>
-					<a class="album-names" href="https://open.spotify.com/album/2zXYdPH0aUX0xVT8ZK0uCO?si=OR8-yrvzS72LLUWYg0O-3Q">rewind my tape pt 1</a>
-					<a class="album-names" href="https://open.spotify.com/album/2oRaqvWFLOKFUDIt5EEQfa?si=PUtZiCiST8K0caBKGNvK9w">pilgrim's paradise</a>
-					<a class="album-names" href="https://open.spotify.com/album/6dtDTbVBQ9QwsNaqEnjsOT?si=JulUfqCpRGmO1vvx62qo3Q">luv 4 rent</a>
+				<div class="header-name">
+					<hr class="gray-line" /> 
+					<h2 class="design-type">my interests</h2>
+					<hr class="gray-line" /> 
 				</div>
-				<video loop autoplay muted class="playlists">
-					<source src="../assets/playlists.mov">
-				</video>
+				<section class="grid">
+					<div class="grid-item">
+						<video loop autoplay muted class="playlists">
+							<source src="../assets/playlists.mov">
+						</video>
+						<hr class="grid-line" />
+						<p class="grid-name bolded-neue">curating my playlist</p>
+					</div>
+					<div class="grid-item">
+						<div class="img-div">
+							<img class="pic" src="../assets/bonju.png">
+						</div>
+						<hr class="grid-line" />
+						<p class="grid-name bolded-neue">visiting photobooths!</p>
+					</div>
+					<div class="grid-item">
+						<div class="danny img-div">
+							<img class="pic" src="../assets/danny.jpg">
+						</div>
+						<hr class="white-grid-line" />
+						<p class="white grid-name bolded-neue">going to concerts</p>
+					</div>
+				</section>
 			</div>
 		</main>
 
