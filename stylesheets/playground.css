@@ -1,0 +1,42 @@
+.hero {
+	font-size: calc(var(--font-size)*3);
+	margin: auto;
+	text-align: center;
+}
+
+section {
+	width: 65rem;
+	margin: auto;
+	margin-top: calc(var(--margin)*3);
+}
+
+.sub {
+	text-align: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 65rem;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	margin-top: calc(var(--margin)*3);
+}
+
+
+video, img {
+	width: 80%;
+	border-radius: calc(var(--border-radius)/1.2);
+	overflow: hidden;
+}
+
+.grid-item {
+	width: fit-content;
+}
+
+
+.highlight {
+	background-color: var(--black);
+	color: var(--white);
+}
