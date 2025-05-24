@@ -188,6 +188,7 @@ footer {
 .footer-info {
 	color: var(--white);
 	font-weight: bolder;
+	cursor: pointer;
 }
 
 .footer {
