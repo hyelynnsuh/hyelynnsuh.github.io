@@ -374,6 +374,10 @@ video {
 
 /* 1200px */
 @media (min-width: 1200px) {
+
+	.nav > a {
+		font-size: var(--font-size);
+	}
 	
 	.case-subtext {
 		width: 31rem;

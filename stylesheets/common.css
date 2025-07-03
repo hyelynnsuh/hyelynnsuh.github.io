@@ -208,6 +208,10 @@ footer {
 	align-self: center;
 }
 
+/* video::-webkit-media-controls {
+	display: none;
+} */
+
 
 /* 800PX */
 @media(min-width: 800px) {
