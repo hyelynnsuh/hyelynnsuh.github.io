@@ -1,0 +1,128 @@
+/* Interactive chrome: menus, toggles, dropdown nav */
+
+ul {
+	list-style: none;
+}
+
+li > a {
+	cursor: pointer;
+}
+
+.nav {
+	width: 100%;
+	position: absolute;
+	background-color: var(--black);
+	overflow: hidden;
+	max-height: 0;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+}
+
+.menu a {
+	display: block;
+	padding: 30px;
+	color: var(--white);
+}
+
+.menu a:hover {
+	background-color: var(--black);
+}
+
+/* MENU ICON — minimum touch target ~44px */
+.hamb {
+	cursor: pointer;
+	float: right;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 44px;
+	min-height: 44px;
+	padding: var(--padding);
+	margin-right: 0.2rem;
+}
+
+.hamb-line {
+	background: var(--black);
+	display: block;
+	height: 2px;
+	position: relative;
+	width: 20px;
+}
+
+.hamb-line::before {
+	background: var(--black);
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	top: 5px;
+}
+
+.hamb-line::after {
+	top: -5px;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background: var(--black);
+}
+
+.side-menu {
+	display: none;
+}
+
+/* TOGGLE MENU */
+.side-menu:checked ~ nav {
+	max-height: 1000%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+	background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+/* =============================================================================
+   Desktop navigation
+   ============================================================================= */
+@media (min-width: 1200px) {
+	.hamb, .side-menu {
+		display: none;
+	}
+
+	.nav {
+		all: unset;
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		justify-content: flex-end;
+		margin-right: calc(var(--margin) * 2);
+	}
+
+	.menu {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.menu a {
+		padding: 0;
+		color: var(--black);
+		font-weight: var(--bolded);
+		background: none;
+	}
+
+	.menu a:hover {
+		color: var(--white);
+	}
+}

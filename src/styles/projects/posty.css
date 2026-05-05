@@ -23,7 +23,7 @@
 	content: "";
 	width: 50px;
 	height: 50px;
-	background: url("casefiles/posty-logo.png") center/cover no-repeat;
+	background: url("/projects/casefiles/posty-logo.png") center/cover no-repeat;
 	position: absolute;
 	top: 50%;
 	left: 50%;

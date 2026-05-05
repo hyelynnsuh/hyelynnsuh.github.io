@@ -17,7 +17,7 @@
 	content: "";
 	width: 50px;
 	height: 50px;
-	background: url("casefiles/depop.png") center/cover no-repeat;
+	background: url("/projects/casefiles/depop.png") center/cover no-repeat;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -338,7 +338,7 @@ video {
 		content: "";
 		width: 80px;
 		height: 80px;
-		background: url("casefiles/depop.png") center/cover no-repeat;
+		background: url("/projects/casefiles/depop.png") center/cover no-repeat;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -410,7 +410,7 @@ video {
 		content: "";
 		width: 50px;
 		height: 50px;
-		background: url("casefiles/depop.png") center/cover no-repeat;
+		background: url("/projects/casefiles/depop.png") center/cover no-repeat;
 		position: absolute;
 		top: 50%;
 		left: 50%;

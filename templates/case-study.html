@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>%%PAGE_TITLE%%</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="%%META_DESCRIPTION%%">
+		<link href="/assets/fonts/stylesheet.css" rel="stylesheet">
+		<script type="module" src="/src/main.js"></script>
+%%STYLES_AFTER_COMMON%%
+		<link rel="preload" href="/assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
+%%HEAD_EXTRA%%
+	</head>
+	<body class="%%BODY_CLASS%%">
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<header class="navbar">
+			<a href="../index.html" class="logo" aria-label="Hye Lynn Suh — home">
+				<img src="/assets/black-logo.gif" alt="" width="120" height="36">
+			</a>
+
+			<input class="side-menu" type="checkbox" id="side-menu" aria-controls="site-nav">
+			<label class="hamb" for="side-menu">
+				<span class="visually-hidden">Open menu</span>
+				<span class="hamb-line" aria-hidden="true"></span>
+			</label>
+			<nav class="nav" id="site-nav" aria-label="Primary">
+				<ul class="menu">
+					<li>
+						<a%%NAV_LINK_CLASS_ATTR%% href="%%NAV_WORK_HREF%%">work</a>
+					</li>
+					<li>
+						<a%%NAV_LINK_CLASS_ATTR%% href="../pages/playground.html">playground</a>
+					</li>
+					<li>
+						<a%%NAV_LINK_CLASS_ATTR%% href="../pages/about.html">about</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main-content">
+%%MAIN_CONTENT%%
+		</main>
+
+		<footer>
+			<div class="footer">
+				<p class="footer-info credits">&copy; hye lynn suh, %%COPYRIGHT_YEAR%%</p>
+				<div class="socials">
+					<a class="footer-info" href="https://www.linkedin.com/in/hyelynnsuh/">LinkedIn</a>
+					<span class="footer-info">email</span>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

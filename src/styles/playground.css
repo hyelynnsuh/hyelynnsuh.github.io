@@ -1,3 +1,7 @@
+/* =============================================================================
+   Playground page
+   ============================================================================= */
+
 .hero {
 	font-size: calc(var(--font-size)*3);
 	margin: auto;
@@ -39,4 +43,26 @@ video, img {
 .highlight {
 	background-color: var(--black);
 	color: var(--white);
+}
+
+/* Narrow viewports — prevent fixed 65rem from forcing horizontal scroll */
+@media (max-width: 1100px) {
+	section,
+	.grid {
+		width: 100%;
+		max-width: 100%;
+		padding-left: var(--padding);
+		padding-right: var(--padding);
+		box-sizing: border-box;
+	}
+
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 600px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
 }

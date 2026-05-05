@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>About Hye Lynn</title>
+		<meta charset="utf-8">
+		<title>About — Hye Lynn Suh</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="../stylesheets/reset.css" rel="stylesheet">
-		<link href="../stylesheets/common.css" rel="stylesheet">
-		<link href="../stylesheets/about.css" rel="stylesheet">
-		<link href="../assets/fonts/stylesheet.css" rel="stylesheet">
-		<script defer src="../script.js"></script>
+		<meta name="description" content="About Hye Lynn Suh — product designer and graduate student in Communication Design at Parsons.">
+		<link href="/assets/fonts/stylesheet.css" rel="stylesheet">
+		<script type="module" src="/src/main.js"></script>
+		<link rel="stylesheet" href="/src/styles/about.css">
 
-		<!-- FONTS -->
-		<link rel="preload" href="../assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="/assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
 	</head>
 	<body class="neue">
+		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="navbar">
-			<a href="../index.html" class="logo">
-				<img src="../assets/black-logo.gif">
+			<a href="../index.html" class="logo" aria-label="Hye Lynn Suh — home">
+				<img src="/assets/black-logo.gif" alt="" width="120" height="36">
 			</a>
-			<input class="side-menu" type="checkbox" id="side-menu">
+			<input class="side-menu" type="checkbox" id="side-menu" aria-controls="site-nav">
 			<label class="hamb" for="side-menu">
-				<span class="hamb-line"></span>
+				<span class="visually-hidden">Open menu</span>
+				<span class="hamb-line" aria-hidden="true"></span>
 			</label>
-			<nav class="nav">
+			<nav class="nav" id="site-nav" aria-label="Primary">
 				<ul class="menu">
 					<li>
 						<a class="bolded-neue" href="../index.html">work</a>
@@ -30,26 +31,26 @@
 						<a class="bolded-neue" href="playground.html">playground</a>
 					</li>
 					<li>
-						<a class="bolded-neue"><span class="highlight">about</span></a>
+						<a class="bolded-neue" href="about.html" aria-current="page"><span class="highlight">about</span></a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 
-		<main>
-			<section class="about-page">
+		<main id="main-content">
+			<section class="about-page" aria-labelledby="about-name-heading">
 				<div class="polaroid">
-					<img class="pic" src="../assets/me.png">
-					<!-- <p>about me</p> -->
+					<img class="pic" src="/assets/me.png" alt="Portrait of Hye Lynn Suh">
 				</div>
 				<div class="hyelynn">
 					<div class="about-name">
-						<h2>
+						<h1 class="about-heading" id="about-name-heading">
+							<span class="visually-hidden">Name: </span>
 							hye•lynn•suh
-						</h2>
-						<h3 class="quality">
+						</h1>
+						<h2 class="quality">
 							/hey,lin s-uh/
-						</h3>
+						</h2>
 					</div>
 					<div class="about">
 						<div class="ab-section">
@@ -71,7 +72,7 @@
 								graduated from <a class="link" href="https://aap.cornell.edu/">Cornell Univeristy</a> with a Bachelor of Fine Arts
 							</p>
 						</div>
-						<div class="ab-section"></div>
+						<div class="ab-section">
 							<p class="quality">
 								verb
 							</p>
@@ -82,33 +83,33 @@
 					</div>
 				</div>
 			</section>
-			<img src="../assets/skills.png">
+			<img src="/assets/skills.png" alt="Skills and tools overview">
 			<div class="album-container">
 				<div class="header-name">
-					<hr class="gray-line" /> 
+					<hr class="gray-line">
 					<h2 class="design-type">my interests</h2>
-					<hr class="gray-line" /> 
+					<hr class="gray-line">
 				</div>
-				<section class="grid">
+				<section class="grid" aria-label="Personal interests">
 					<div class="grid-item">
-						<video loop autoplay muted class="playlists">
-							<source src="../assets/playlists.mov">
+						<video loop autoplay muted playsinline class="playlists">
+							<source src="/assets/playlists.mov" type="video/quicktime">
 						</video>
-						<hr class="grid-line" />
+						<hr class="grid-line">
 						<p class="grid-name bolded-neue">curating my playlist</p>
 					</div>
 					<div class="grid-item">
 						<div class="img-div">
-							<img class="pic" src="../assets/bonju.png">
+							<img class="pic" src="/assets/bonju.png" alt="Bonjour LA photobooth strips">
 						</div>
-						<hr class="grid-line" />
+						<hr class="grid-line">
 						<p class="grid-name bolded-neue">visiting photobooths!</p>
 					</div>
 					<div class="grid-item">
 						<div class="danny img-div">
-							<img class="pic" src="../assets/danny.jpg">
+							<img class="pic" src="/assets/danny.JPG" alt="Concert photo">
 						</div>
-						<hr class="white-grid-line" />
+						<hr class="white-grid-line">
 						<p class="white grid-name bolded-neue">going to concerts</p>
 					</div>
 				</section>
@@ -119,8 +120,8 @@
 			<div class="footer">
 				<p class="footer-info credits">&copy; hye lynn suh, 2025</p>
 				<div class="socials">
-					<a class="footer-info">linkedin</a>
-					<a class="footer-info">email</a>
+					<a class="footer-info" href="https://www.linkedin.com/in/hyelynnsuh/">LinkedIn</a>
+					<span class="footer-info">email</span>
 				</div>
 			</div>
 		</footer>

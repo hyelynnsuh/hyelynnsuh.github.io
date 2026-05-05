@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Portfolio</title>
+		<meta charset="utf-8">
+		<title>Playground — Hye Lynn Suh</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="../stylesheets/reset.css" rel="stylesheet">
-		<link href="../stylesheets/common.css" rel="stylesheet">
-		<link href="../stylesheets/playground.css" rel="stylesheet">
-		<link href="../assets/fonts/stylesheet.css" rel="stylesheet">
-		<script defer src="../script.js"></script>
+		<meta name="description" content="Creative playground — motion, photography, and video experiments by Hye Lynn Suh.">
+		<link href="/assets/fonts/stylesheet.css" rel="stylesheet">
+		<script type="module" src="/src/main.js"></script>
+		<link rel="stylesheet" href="/src/styles/playground.css">
 
-		<!-- FONTS -->
-		<link rel="preload" href="../assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="/assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
 	</head>
 	<body class="neue">
+		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="navbar">
-			<a href="../index.html" class="logo">
-				<img src="../assets/black-logo.gif">
+			<a href="../index.html" class="logo" aria-label="Hye Lynn Suh — home">
+				<img src="/assets/black-logo.gif" alt="" width="120" height="36">
 			</a>
-			<input class="side-menu" type="checkbox" id="side-menu">
+			<input class="side-menu" type="checkbox" id="side-menu" aria-controls="site-nav">
 			<label class="hamb" for="side-menu">
-				<span class="hamb-line"></span>
+				<span class="visually-hidden">Open menu</span>
+				<span class="hamb-line" aria-hidden="true"></span>
 			</label>
-			<nav class="nav">
+			<nav class="nav" id="site-nav" aria-label="Primary">
 				<ul class="menu">
 					<li>
 						<a href="../index.html">work</a>
 					</li>
 					<li>
-						<a href="pages/playground.html" ><span class="highlight">playground</span></a>
+						<a href="playground.html" aria-current="page"><span class="highlight">playground</span></a>
 					</li>
 					<li>
 						<a href="about.html">about</a>
@@ -36,44 +37,54 @@
 			</nav>
 		</header>
 
-		<main>
-			<section class="welcome">
-				<h1 class="hero">welcome to my playground</h1>
+		<main id="main-content">
+			<section class="welcome" aria-labelledby="playground-heading">
+				<h1 class="hero" id="playground-heading">welcome to my playground</h1>
 				<p class="sub">a collection of everything i pursue creatively</p>
 			</section>
 			<div class="grid">
 				<figure>
-					<video loop autoplay muted src="../assets/SEOULDBOUND02.mp4" class="grid-image">
+					<video class="grid-image" loop autoplay muted playsinline aria-label="Seoul motion clip">
+						<source src="/assets/SEOULDBOUND02.mp4" type="video/mp4">
+					</video>
 				</figure>
 				<figure>
-					<img src="../assets/jazz01.JPG" class="grid-image">
+					<img src="/assets/jazz01.JPG" class="grid-image" alt="Jazz club photograph">
 				</figure>
 				<figure>
-					<img src="../assets/pandora.JPG" class="grid-image">
+					<img src="/assets/pandora.JPG" class="grid-image" alt="Pandora event photograph">
 				</figure>
 				<figure>
-					<img src="../assets/pandora2.JPG" class="grid-image">
+					<img src="/assets/pandora2.JPG" class="grid-image" alt="Pandora event photograph">
 				</figure>
 				<figure>
-					<img src="../assets/lexo.JPG" class="grid-image">
+					<img src="/assets/lexo.JPG" class="grid-image" alt="LEXO photograph">
 				</figure>
 				<figure>
-					<img src="../assets/hands.JPG" class="grid-image">
+					<img src="/assets/hands.JPG" class="grid-image" alt="Hands photograph">
 				</figure>
 				<figure>
-					<img src="../assets/hands.JPG" class="grid-image">
+					<img src="/assets/hands.JPG" class="grid-image" alt="">
 				</figure>
 				<figure>
-					<video loop autoplay muted src="../assets/SEOULBOUND1mp4.mp4" class="grid-image">
+					<video class="grid-image" loop autoplay muted playsinline aria-label="Seoul motion clip">
+						<source src="/assets/SEOULBOUND1mp4.mp4" type="video/mp4">
+					</video>
 				</figure>
 				<figure>
-					<video loop autoplay muted src="../assets/SEOULBOUND03.mp4" class="grid-image">
+					<video class="grid-image" loop autoplay muted playsinline aria-label="Seoul motion clip">
+						<source src="/assets/SEOULBOUND03.mp4" type="video/mp4">
+					</video>
 				</figure>
 				<figure>
-					<video loop autoplay muted src="../assets/globe.mp4" class="grid-image">
+					<video class="grid-image" loop autoplay muted playsinline aria-label="Globe motion study">
+						<source src="/assets/globe.mp4" type="video/mp4">
+					</video>
 				</figure>
 				<figure>
-					<video loop autoplay muted src="../assets/sandwich.mp4" class="grid-image">
+					<video class="grid-image" loop autoplay muted playsinline aria-label="Sandwich motion clip">
+						<source src="/assets/sandwich.mp4" type="video/mp4">
+					</video>
 				</figure>
 			</div>
 		</main>
@@ -81,8 +92,8 @@
 			<div class="footer">
 				<p class="footer-info credits">&copy; hye lynn suh, 2025</p>
 				<div class="socials">
-					<a class="footer-info" href="https://www.linkedin.com/in/hyelynnsuh/">linkedin</a>
-					<a class="footer-info">email</a>
+					<a class="footer-info" href="https://www.linkedin.com/in/hyelynnsuh/">LinkedIn</a>
+					<span class="footer-info">email</span>
 				</div>
 			</div>
 		</footer>

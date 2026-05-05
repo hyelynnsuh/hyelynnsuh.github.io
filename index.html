@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Portfolio</title>
-		<link href="assets/favicon.png" rel="icon" sizes="any">
+		<meta charset="utf-8">
+		<title>Hye Lynn Suh — Product Designer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="stylesheets/reset.css" rel="stylesheet">
-		<link href="stylesheets/common.css" rel="stylesheet">
-		<link href="stylesheets/style.css" rel="stylesheet">
-		<link href="assets/fonts/stylesheet.css" rel="stylesheet">
-		<script defer src="script.js"></script>
+		<meta name="description" content="Portfolio of Hye Lynn Suh — product design, visual design, and creative work based in NYC.">
+		<link href="/assets/favicon.png" rel="icon" sizes="any">
+		<link href="/assets/fonts/stylesheet.css" rel="stylesheet">
+		<script type="module" src="/src/main.js"></script>
+		<link rel="stylesheet" href="/src/styles/home.css">
 
-		<!-- FONTS -->
-		<link rel="preload" href="assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="/assets/fonts/NeueHaasDisplay-Mediu.woff" as="font" type="font/woff" crossorigin>
 	</head>
 	<body class="neue">
+		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="navbar">
-			<a href="#" class="logo">
-				<img src="assets/black-logo.gif">
+			<a href="index.html" class="logo" aria-label="Hye Lynn Suh — home">
+				<img src="/assets/black-logo.gif" alt="" width="120" height="36">
 			</a>
-			<input class="side-menu" type="checkbox" id="side-menu">
+			<input class="side-menu" type="checkbox" id="side-menu" aria-controls="site-nav">
 			<label class="hamb" for="side-menu">
-				<span class="hamb-line"></span>
+				<span class="visually-hidden">Open menu</span>
+				<span class="hamb-line" aria-hidden="true"></span>
 			</label>
-			<nav class="nav">
+			<nav class="nav" id="site-nav" aria-label="Primary">
 				<ul class="menu">
 					<li>
 						<a href="#product-design">work</a>
@@ -37,18 +38,18 @@
 			</nav>
 		</header>
 
-		<main>
+		<main id="main-content">
 			<div class="intro-flex">
-				<div class="big-turn">
-					<img class="big-vinyl" src="assets/vinyl.png">
+				<div class="big-turn" aria-hidden="true">
+					<img class="big-vinyl" src="/assets/vinyl.png" alt="">
 					<div class="big-center-label"></div>
 				</div>
-				<section id="intro-container">
+				<section id="intro-container" aria-labelledby="intro-heading">
 					<section id="intro">
-						<!-- <p class="name-subtext left-def">portfolio</p> -->
-						<h1 class="name">hye lynn suh</h1>
+						<h1 class="name" id="intro-heading">hye lynn suh</h1>
 						<div class="wrapper">
-							<div class="words">
+							<p class="visually-hidden">Roles:</p>
+							<div class="words" aria-hidden="true">
 								<span class="flip">product designer</span>
 								<span class="flip">aspiring coder</span>
 								<span class="flip">music lover</span>
@@ -58,48 +59,47 @@
 							</div>
 							<p class="name-subtext right-def">based in nyc</p>
 						</div>
-						<div class="crop-marks"></div>
+						<div class="crop-marks" aria-hidden="true"></div>
 					</section>
-					<button class="enter" id="slideUp">enter my portfolio</button>
+					<button type="button" class="enter" id="slideUp">enter my portfolio</button>
 				</section>
 			</div>
-			
 
-			<section class="super-turn">
-				<div class="player">
+			<section class="super-turn" aria-labelledby="super-heading">
+				<div class="player" aria-hidden="true">
 					<div class="turntable-container">
-						<img class="turntable" src="assets/player.png">
+						<img class="turntable" src="/assets/player.png" alt="">
 						<div class="main-turn">
-							<img class="vinyl" src="assets/vinyl.png">
+							<img class="vinyl" src="/assets/vinyl.png" alt="">
 							<div class="center-label"></div>
 						</div>
 					</div>
 				</div>
 				<section id="super-power">
 					<div id="super-wrapper">
-						<h3 class="super-power">
+						<h2 class="super-power" id="super-heading">
 							making structured design feel <span class="circle">natural,</span> <span class="circle">emotional,</span> and profoundly <span class="circle">human</span>
-						</h3>
-						<div class="dark-crops"></div>
+						</h2>
+						<div class="dark-crops" aria-hidden="true"></div>
 					</div>
 					<p class="cta">
-						see my projects down below ↓ 
+						see my projects down below ↓
 					</p>
 				</section>
 			</section>
 
-			<section id="product-design">
+			<section id="product-design" aria-labelledby="product-design-heading">
 				<div class="header-name">
-					<hr class="gray-line" /> 
-					<h2 class="design-type">product design</h2>
-					<hr class="gray-line" /> 
+					<hr class="gray-line">
+					<h2 class="design-type" id="product-design-heading">product design</h2>
+					<hr class="gray-line">
 				</div>
 				<ul class="project-grid">
 					<li class="glass-card">
 						<a href="projects/posty.html" class="project">
-							<img class="pre-cover posty-cover" src="assets/posty-preview.png">
+							<img class="pre-cover posty-cover" src="/assets/posty-preview.png" alt="Posty project preview">
 							<div class="proj-preview">
-								<h4 class="proj-type">1st place design hackathon</h4>
+								<p class="proj-type">1st place design hackathon</p>
 								<h3 class="proj-name">Posty</h3>
 								<p class="preview-desc">an AI-powered compost companion paired with its own feedback app</p>
 							</div>
@@ -107,33 +107,31 @@
 					</li>
 					<li class="glass-card">
 						<a href="projects/depop.html" class="project">
-							<img class="pre-cover" src="assets/depop.png">
+							<img class="pre-cover" src="/assets/depop.png" alt="Depop project preview">
 							<div class="proj-preview">
-								<h4 class="proj-type">feature integration</h4>
+								<p class="proj-type">feature integration</p>
 								<h3 class="proj-name">depop: styled by you</h3>
 								<p class="preview-desc">integrating user customization within Depop's existing design system</p>
-								<button class="see-more"></button>
 							</div>
 						</a>
 					</li>
 					<!-- <li class="glass-card">
 						<a href="projects/basketbuddies.html" class="project">
-							<img class="pre-cover" src="assets/basketbuddies.png">
+							<img class="pre-cover" src="/assets/basketbuddies.png">
 							<div class="proj-preview">
-								<h4 class="proj-type">capstone</h4>
+								<p class="proj-type">capstone</p>
 								<h3 class="proj-name"> BasketBuddies</h3>
 								<p class="preview-desc">a collaborative grocery shopping service for friends</p>
-								<button class="see-more"></button>
 							</div>
 						</a>
 					</li> -->
 					<li class="glass-card">
 						<a href="https://hyelynnsuh.github.io/functions/" class="project">
-							<img class="pre-cover" src="assets/proj5 copy.png">
+							<img class="pre-cover" src="/assets/proj5 copy.png" alt="What should Hye Lynn eat? project preview">
 							<div class="proj-preview">
 								<div class="mult-types">
-									<h4 class="proj-type">web design</h4>
-									<h4 class="proj-type">creative coding</h4>
+									<p class="proj-type">web design</p>
+									<p class="proj-type">creative coding</p>
 								</div>
 								<h3 class="proj-name">what should hye lynn eat?</h3>
 								<p class="preview-desc">an interactive web app that helps users decide what to eat by filtering through a curated list of meals</p>
@@ -142,11 +140,11 @@
 					</li>
 					<li class="glass-card">
 						<a href="https://hyelynnsuh.github.io/links/" class="project">
-							<img class="pre-cover" src="assets/links.png">
+							<img class="pre-cover" src="/assets/links.png" alt="Links project preview">
 							<div class="proj-preview">
 								<div class="mult-types">
-									<h4 class="proj-type">web design</h4>
-									<h4 class="proj-type">creative coding</h4>
+									<p class="proj-type">web design</p>
+									<p class="proj-type">creative coding</p>
 								</div>
 								<h3 class="proj-name">links</h3>
 								<p class="preview-desc">a responsive website of a collection of push buttons in media</p>
@@ -155,63 +153,59 @@
 					</li>
 				</ul>
 			</section>
-			<section id="visual-design">
+			<section id="visual-design" aria-labelledby="visual-design-heading">
 				<div class="header-name">
-					<hr class="gray-line" /> 
-					<h2 class="design-type">visual design</h2>
-					<hr class="gray-line" /> 
+					<hr class="gray-line">
+					<h2 class="design-type" id="visual-design-heading">visual design</h2>
+					<hr class="gray-line">
 				</div>
 				<ul class="project-grid">
 					<li class="glass-card">
 						<a class="project" href="https://www.instagram.com/p/C4L_6y1yfLA/">
-							<img class="pre-cover" src="assets/ZINE_WHITE.gif" id="spotify">
+							<img class="pre-cover" src="/assets/ZINE_WHITE.gif" id="spotify" alt="GASP x Spotify zine animation">
 							<div class="proj-preview">
 								<div class="mult-types">
-									<h4 class="proj-type">print design</h4>
-									<h4 class="proj-type">motion graphics</h4>
+									<p class="proj-type">print design</p>
+									<p class="proj-type">motion graphics</p>
 								</div>
 								<h3 class="proj-name">gasp x spotify</h3>
 								<p class="preview-desc">collaborated with Spotify Frequency to create a zine celebrating artists of color for Black History Month</p>
-								<button class="see-more"></button>
 							</div>
 						</a>
 					</li>
 					<li class="glass-card">
 						<a class="project" href="https://www.instagram.com/p/CzUhuhgSC3E/">
-							<img class="pre-cover" src="assets/GASPxDerm.png">
+							<img class="pre-cover" src="/assets/GASPxDerm.png" alt="GASP x Dermalogica branding preview">
 							<div class="proj-preview">
-								<h4 class="proj-type">branding</h4>
+								<p class="proj-type">branding</p>
 								<h3 class="proj-name">gasp x dermalogica</h3>
 								<p class="preview-desc">collaborated with Dermalogica to create a skincare x art gallery</p>
-								<button class="see-more"></button>
 							</div>
 						</a>
 					</li>
 					<li class="glass-card">
 						<a class="project" href="https://www.instagram.com/p/ChFcZoSJCv3/">
-							<img class="pre-cover" src="assets/a.png">
+							<img class="pre-cover" src="/assets/a.png" alt="GASP zine edition 12 preview">
 							<div class="proj-preview">
 								<div class="mult-types">
-									<h4 class="proj-type">print design</h4>
-									<h4 class="proj-type">motion graphics</h4>
+									<p class="proj-type">print design</p>
+									<p class="proj-type">motion graphics</p>
 								</div>
 								<h3 class="proj-name">gasp zine ed. 12</h3>
 								<p class="preview-desc">collaborated with David Lachapelle to create GASP's 14th edition</p>
-								<button class="see-more"></button>
 							</div>
 						</a>
 					</li>
 					<li class="glass-card">
 						<a class="project" href="https://www.instagram.com/p/C1u9LjRS9Ol/">
-							<img class="pre-cover" src="assets/gaspxnike02.png">
+							<img class="pre-cover" src="/assets/gaspxnike02.png" alt="GASP x Nike Women preview">
 							<div class="proj-preview">
 								<div class="mult-types">
-									<h4 class="proj-type">branding</h4>
-									<h4 class="proj-type">print design</h4>
+									<p class="proj-type">branding</p>
+									<p class="proj-type">print design</p>
 								</div>
 								<h3 class="proj-name">gasp x nike women</h3>
 								<p class="preview-desc">collaborated with Nike Women for Nike's Style Studio, curating a day of style, dance, and creative exploration</p>
-								<button class="see-more"></button>
 							</div>
 						</a>
 					</li>
@@ -222,8 +216,8 @@
 			<div class="footer">
 				<p class="footer-info credits">&copy; hye lynn suh, 2025</p>
 				<div class="socials">
-					<a class="footer-info" href="www.linkedin.com/in/hyelynnsuh">linkedin</a>
-					<a class="footer-info">email</a>
+					<a class="footer-info" href="https://www.linkedin.com/in/hyelynnsuh/">LinkedIn</a>
+					<span class="footer-info">email</span>
 				</div>
 			</div>
 		</footer>

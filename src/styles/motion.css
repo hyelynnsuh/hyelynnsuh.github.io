@@ -1,0 +1,49 @@
+/* Transitions + keyframes shared across the site */
+/* When JS detects reduced motion it sets .motion-prefers-reduced on <html> (Motion layer skipped). */
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.navbar {
+		transition: none !important;
+	}
+
+	.nav {
+		transition: none !important;
+	}
+
+	.flip {
+		animation: none !important;
+	}
+
+	.main-turn {
+		animation: none !important;
+	}
+
+	.hamb-line::before,
+	.hamb-line::after {
+		transition: none !important;
+	}
+}
+
+/* Navbar hide-on-scroll */
+.navbar {
+	transition: transform 0.3s ease-in-out;
+}
+
+.nav {
+	transition: max-height 0.5s ease-out;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+	transition: all 0.2s ease-out;
+}
