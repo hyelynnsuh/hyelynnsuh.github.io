@@ -7,6 +7,7 @@ import './styles/components.css'
 import './styles/motion.css'
 
 import { initMotion } from './utils/motion.js'
+import { initHomeGallery } from './homeGallery.js'
 
 initMotion()
 
@@ -15,6 +16,8 @@ initMotion()
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+	initHomeGallery()
+
 	const navbar = document.querySelector('.navbar')
 	if (navbar) {
 		let lastScrollTop = 0
