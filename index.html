@@ -26,7 +26,10 @@
 			<nav class="nav" id="site-nav" aria-label="Primary">
 				<ul class="menu">
 					<li>
-						<a href="#work-gallery">work</a>
+						<a href="#product-design">work</a>
+					</li>
+					<li>
+						<a href="pages/playground.html">playground</a>
 					</li>
 					<li>
 						<a href="pages/about.html">about</a>
@@ -48,10 +51,11 @@
 							<p class="visually-hidden">Roles:</p>
 							<div class="words" aria-hidden="true">
 								<span class="flip">product designer</span>
-								<span class="flip">aspiring coder</span>
 								<span class="flip">music lover</span>
 								<span class="flip">motion designer</span>
-								<span class="flip">service designer</span>
+								<span class="flip">0->1 designer</span>
+								<span class="flip">ai designer</span>
+								<span class="flip">aspiring coder</span>
 								<span class="flip">product designer</span>
 							</div>
 							<p class="name-subtext right-def">based in nyc</p>
@@ -72,7 +76,7 @@
 						</div>
 					</div>
 				</div>
-				<section id="super-power">
+				<section id="super-power" hidden>
 					<div id="super-wrapper">
 						<h2 class="super-power" id="super-heading">
 							making structured design feel <span class="circle">natural,</span> <span class="circle">emotional,</span> and profoundly <span class="circle">human</span>
@@ -85,19 +89,22 @@
 				</section>
 			</section>
 
-			<section id="work-gallery" class="work-gallery" aria-labelledby="work-gallery-heading">
-				<div class="header-name work-gallery__header">
+			<section id="product-design" aria-labelledby="product-design-heading">
+				<div class="header-name">
 					<hr class="gray-line">
-					<h2 class="design-type" id="work-gallery-heading">work</h2>
+					<h2 class="design-type" id="product-design-heading">product design</h2>
 					<hr class="gray-line">
 				</div>
-				<p class="work-gallery__lede">Product, visual, and playground pieces — case studies, links, and media.</p>
-				<div class="work-gallery__viewport">
-					<!-- Parallax hook: set --wg-scroll-shift / --wg-parallax-depth on .work-gallery__track via JS -->
-					<div class="work-gallery__scene">
-						<div class="work-gallery__track" id="work-gallery-track"></div>
-					</div>
+				<ol class="case-study-list" id="product-design-list"></ol>
+			</section>
+
+			<section id="visual-design" aria-labelledby="visual-design-heading">
+				<div class="header-name">
+					<hr class="gray-line">
+					<h2 class="design-type" id="visual-design-heading">visual design</h2>
+					<hr class="gray-line">
 				</div>
+				<ul class="project-grid" id="visual-design-grid"></ul>
 			</section>
 		</main>
 		<footer>

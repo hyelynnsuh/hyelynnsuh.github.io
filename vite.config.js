@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -17,9 +19,11 @@ const inputs = {
   posty: resolve(__dirname, 'projects/posty.html'),
   depop: resolve(__dirname, 'projects/depop.html'),
   basketbuddies: resolve(__dirname, 'projects/basketbuddies.html'),
+  caseStudyTemplate: resolve(__dirname, 'projects/case-study-template.html'),
 }
 
 export default defineConfig({
+  plugins: [react(), tailwindcss()],
   // Use root domain (user site) or set to '/repo-name/' for project Pages.
   base: './',
   publicDir: 'public',

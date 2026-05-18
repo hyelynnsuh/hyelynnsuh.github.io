@@ -1,5 +1,5 @@
 /**
- * Phase 0 — canonical list of portfolio work for the homepage gallery.
+ * Canonical list of portfolio work — homepage sections and playground gallery.
  * `kind` drives behavior: case-study → navigate; external → open URL; media → modal.
  *
  * @typedef {'case-study' | 'media' | 'external'} WorkKind
@@ -131,7 +131,7 @@ export const WORK_ITEMS = [
 		description: "collaborated with Nike Women for Nike's Style Studio, curating a day of style, dance, and creative exploration",
 	},
 
-	// ——— Playground (modal media; formerly separate page) ———
+	// ——— Playground (3D gallery on playground page) ———
 	{
 		id: 'playground-seoul-02',
 		title: 'Seoul (clip 2)',
@@ -245,4 +245,13 @@ export const WORK_ITEMS = [
  */
 export function getVisibleWorkItems() {
 	return WORK_ITEMS.filter((item) => !item.hidden)
+}
+
+/**
+ * Visible items in a category (`product`, `visual`, `playground`).
+ * @param {string} category
+ * @returns {WorkItem[]}
+ */
+export function getVisibleWorkItemsByCategory(category) {
+	return getVisibleWorkItems().filter((item) => item.category === category)
 }

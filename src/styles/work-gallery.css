@@ -1,0 +1,386 @@
+/* =============================================================================
+   Work gallery — layered 3D stack (floating screens, not isometric)
+   Scroll / parallax: animate --wg-scroll-shift and --wg-parallax-depth on .work-gallery__track
+   Per-card nudge (optional): --wg-layer-nudge on .work-gallery__card
+   ============================================================================= */
+
+.work-gallery {
+	margin-top: calc(var(--margin) * 2);
+	padding-bottom: calc(var(--margin) * 3);
+}
+
+.work-gallery__header {
+	margin-bottom: var(--margin);
+}
+
+.work-gallery__lede {
+	max-width: 36rem;
+	margin: 0 auto calc(var(--margin) * 1.25);
+	padding: 0 var(--padding);
+	text-align: center;
+	font-weight: 500;
+	color: var(--shadow);
+	line-height: var(--lineheight);
+}
+
+.work-gallery__viewport {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: min(88vh, 780px);
+	overflow: hidden;
+	padding: calc(var(--padding) * 0.75) var(--padding) calc(var(--padding) * 2);
+}
+
+.work-gallery__viewport::-webkit-scrollbar {
+	display: none;
+}
+
+.work-gallery__scene {
+	position: relative;
+	width: min(100vw, 1280px);
+	max-width: 100%;
+	perspective: 1400px;
+	perspective-origin: 62% 45%;
+	flex-shrink: 0;
+}
+
+.work-gallery__scene::before,
+.work-gallery__scene::after {
+	content: '';
+	position: absolute;
+	border-radius: 10%;
+	filter: blur(65px);
+	pointer-events: none;
+	opacity: 0.45;
+}
+
+.work-gallery__scene::before {
+	width: 16rem;
+	height: 16rem;
+	top: 10%;
+	left: 10%;
+	background: rgba(255, 255, 255, 0.95);
+}
+
+.work-gallery__scene::after {
+	width: 20rem;
+	height: 20rem;
+	right: 6%;
+	bottom: 3%;
+	background: rgba(42, 39, 35, 0.08);
+}
+
+.work-gallery__track {
+	/* Hooks for scroll-linked animation (set from JS, default 0) */
+	--wg-scroll-shift: 0;
+	--wg-parallax-depth: 0;
+	/* Scroll velocity (Motion `info.y.velocity` → spring), see workGallery.js */
+	--wg-vel-tilt-x: 0deg;
+	--wg-vel-tilt-y: 0deg;
+	--wg-vel-lift: 0px;
+	--wg-origin-x: 18%;
+	--wg-origin-y: 81%;
+	--wg-step-x: clamp(44px, 5.6vw, 66px);
+	--wg-step-y: clamp(-32px, -3.1vw, -20px);
+	--wg-step-z: -22px;
+	position: relative;
+	width: 100%;
+	height: min(78vh, 700px);
+	margin: 0;
+	transform-style: preserve-3d;
+	will-change: transform;
+	transform: translate3d(
+		0,
+		calc(var(--wg-scroll-shift) * 1px + var(--wg-vel-lift, 0px)),
+		calc(var(--wg-parallax-depth) * 1px)
+	)
+		rotateX(var(--wg-vel-tilt-x, 0deg))
+		rotateY(var(--wg-vel-tilt-y, 0deg));
+}
+
+.work-gallery__card {
+	--layer-fade: calc(1 - min(var(--i) * 0.03, 0.52));
+	--card-w: min(19vw, 194px);
+	position: absolute;
+	left: var(--wg-origin-x);
+	top: var(--wg-origin-y);
+	width: var(--card-w);
+	text-decoration: none;
+	color: inherit;
+	transform-style: preserve-3d;
+	/* Subtle screen tilt — not isometric */
+	transform: translate3d(
+			calc(-50% + var(--i) * var(--wg-step-x) + var(--wg-layer-nudge-x, 0px)),
+			calc(-50% + var(--i) * var(--wg-step-y) + var(--wg-layer-nudge-y, 0px)),
+			calc(var(--i) * var(--wg-step-z) + var(--wg-layer-depth-offset, 0px))
+		)
+		rotateY(calc(-8deg + var(--wg-tilt-y, 0deg)))
+		rotateX(calc(0.75deg + var(--wg-tilt-x, 0deg)))
+		rotateZ(var(--wg-tilt-z, 0deg))
+		scale(clamp(0.9, calc(1.04 - var(--i) * 0.004 + var(--wg-scale-bias, 0)), 1.08));
+	opacity: var(--layer-fade);
+	z-index: calc(75 - var(--i));
+	transition: transform 0.45s ease, opacity 0.45s ease, filter 0.45s ease;
+	outline-offset: 4px;
+	filter: saturate(calc(1 - min(var(--i) * 0.035, 0.28)));
+}
+
+.work-gallery__card:focus-visible {
+	outline: 2px solid var(--black);
+	z-index: 120;
+	opacity: 1;
+	filter: saturate(1);
+}
+
+.work-gallery__card--link:hover {
+	z-index: 120;
+	opacity: 1;
+	transform: translate3d(
+			calc(-50% + var(--i) * var(--wg-step-x) + var(--wg-layer-nudge-x, 0px)),
+			calc(-50% + var(--i) * var(--wg-step-y) + var(--wg-layer-nudge-y, 0px)),
+			calc(var(--i) * var(--wg-step-z) + var(--wg-layer-depth-offset, 0px) + 24px)
+		)
+		rotateY(calc(-6deg + var(--wg-tilt-y, 0deg)))
+		rotateX(calc(0.35deg + var(--wg-tilt-x, 0deg)))
+		rotateZ(var(--wg-tilt-z, 0deg))
+		scale(clamp(0.94, calc(1.055 - var(--i) * 0.003 + var(--wg-scale-bias, 0)), 1.1));
+	filter: saturate(1.02);
+}
+
+.work-gallery__card--media {
+	border: none;
+	padding: 0;
+	font: inherit;
+	background: transparent;
+	cursor: pointer;
+	text-align: left;
+}
+
+.work-gallery__card--media:hover {
+	z-index: 120;
+	opacity: 1;
+	transform: translate3d(
+			calc(-50% + var(--i) * var(--wg-step-x) + var(--wg-layer-nudge-x, 0px)),
+			calc(-50% + var(--i) * var(--wg-step-y) + var(--wg-layer-nudge-y, 0px)),
+			calc(var(--i) * var(--wg-step-z) + var(--wg-layer-depth-offset, 0px) + 18px)
+		)
+		rotateY(calc(-6deg + var(--wg-tilt-y, 0deg)))
+		rotateX(calc(0.35deg + var(--wg-tilt-x, 0deg)))
+		rotateZ(var(--wg-tilt-z, 0deg))
+		scale(clamp(0.94, calc(1.045 - var(--i) * 0.003 + var(--wg-scale-bias, 0)), 1.09));
+	filter: saturate(1.02);
+}
+
+/* Glass panel shell — reusable stacked “screen” */
+.work-gallery__panel {
+	--glass-blur: calc(12px + min(var(--i), 10) * 0.6px);
+	--glass-fill: rgba(255, 255, 255, calc(0.16 + (1 - min(var(--i) * 0.04, 0.72)) * 0.2));
+	position: relative;
+	display: block;
+	aspect-ratio: 1 / 1;
+	border-radius: 0.1rem;
+	overflow: hidden;
+	transform-style: preserve-3d;
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.14)),
+		var(--glass-fill);
+	box-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.62) inset,
+		0 16px 40px rgba(20, 19, 17, 0.08),
+		0 28px 72px rgba(20, 19, 17, 0.12);
+	backdrop-filter: blur(var(--glass-blur));
+	-webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.work-gallery__panel::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.18) 24%, transparent 46%),
+		linear-gradient(180deg, transparent 58%, rgba(255, 255, 255, 0.16) 100%);
+	pointer-events: none;
+	z-index: 2;
+}
+
+.work-gallery__panel::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	pointer-events: none;
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.04) inset,
+		0 0 0 10px rgba(255, 255, 255, 0.06) inset;
+	opacity: 0.9;
+	z-index: 3;
+}
+
+/* .work-gallery__panel-inner {
+	position: absolute;
+	inset: 0.55rem;
+	overflow: hidden;
+	border-radius: inherit;
+	background: rgba(255, 255, 255, 0.22);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35) inset;
+} */
+
+.work-gallery__cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	opacity: calc(0.88 + (1 - min(var(--i) * 0.022, 0.82)) * 0.08);
+	transform: scale(1.015);
+	transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
+	filter: contrast(0.96) saturate(0.94);
+}
+
+.work-gallery__cover--video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+
+.work-gallery__card:is(:hover, :focus-visible) .work-gallery__cover {
+	transform: scale(1.035);
+	filter: contrast(1) saturate(1);
+}
+
+.work-gallery__meta {
+	display: none;
+	position: absolute;
+	left: 0.7rem;
+	right: 0.7rem;
+	bottom: 0.7rem;
+	z-index: 4;
+	display: flex;
+	flex-direction: column;
+	gap: 0.22rem;
+	padding: 0.7rem 0.8rem 0.75rem;
+	border-radius: 1rem;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.46));
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	box-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.6) inset,
+		0 8px 24px rgba(20, 19, 17, 0.08);
+	text-shadow: none;
+	transform: translateY(calc(min(var(--i) * 2px, 16px)));
+	opacity: calc(0.96 - min(var(--i) * 0.024, 0.28));
+	transition: opacity 0.4s ease, transform 0.4s ease, background 0.4s ease;
+}
+
+.work-gallery__types {
+	font-size: calc(var(--font-size) * 0.63);
+	font-weight: 500;
+	line-height: 1.2;
+	color: rgba(42, 39, 35, 0.66);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.work-gallery__title {
+	font-size: calc(var(--font-size) * 0.92);
+	font-weight: 600;
+	line-height: 1.2;
+	text-transform: none;
+}
+
+.work-gallery__card:is(:hover, :focus-visible) .work-gallery__meta {
+	transform: translateY(0);
+	opacity: 1;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.56));
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.work-gallery__track {
+		transform: none;
+	}
+
+	.work-gallery__card {
+		transition: none;
+		transform: translate3d(
+				calc(-50% + var(--i) * 32px + var(--wg-layer-nudge-x, 0px)),
+				calc(-50% + var(--i) * -18px + var(--wg-layer-nudge-y, 0px)),
+				0
+			)
+			scale(clamp(0.92, calc(1.02 - var(--i) * 0.003 + var(--wg-scale-bias, 0)), 1.05));
+		opacity: calc(1 - min(var(--i) * 0.03, 0.45));
+		filter: none;
+	}
+
+	.work-gallery__card--link:hover,
+	.work-gallery__card--media:hover {
+		transform: translate3d(
+				calc(-50% + var(--i) * 32px + var(--wg-layer-nudge-x, 0px)),
+				calc(-50% + var(--i) * -18px + var(--wg-layer-nudge-y, 0px)),
+				0
+			)
+			scale(clamp(0.95, calc(1.04 - var(--i) * 0.003 + var(--wg-scale-bias, 0)), 1.07));
+	}
+}
+
+@media (min-width: 1200px) {
+	.work-gallery__header {
+		max-width: 65rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: calc(var(--margin) * 1.2);
+	}
+
+	.work-gallery__lede {
+		font-size: calc(var(--font-size) * 1.05);
+		max-width: 42rem;
+	}
+
+	.work-gallery__track {
+		--wg-origin-x: 15%;
+		--wg-origin-y: 82%;
+		--wg-step-x: clamp(50px, 5vw, 72px);
+		--wg-step-y: clamp(-34px, -2.8vw, -22px);
+		height: min(80vh, 740px);
+	}
+
+	#playground-gallery {
+		margin-top: calc(var(--margin) * 1.5);
+	}
+}
+
+@media (max-width: 799px) {
+	.work-gallery__viewport {
+		min-height: min(62vh, 500px);
+		padding-bottom: calc(var(--padding) * 1.5);
+	}
+
+	.work-gallery__scene {
+		width: min(118vw, 780px);
+	}
+
+	.work-gallery__track {
+		--wg-origin-x: 24%;
+		--wg-origin-y: 74%;
+		--wg-step-x: 24px;
+		--wg-step-y: -14px;
+		height: min(56vh, 430px);
+	}
+
+	.work-gallery__card {
+		--card-w: min(42vw, 164px);
+	}
+
+	.work-gallery__meta {
+		left: 0.55rem;
+		right: 0.55rem;
+		bottom: 0.55rem;
+		padding: 0.58rem 0.65rem 0.62rem;
+	}
+
+	.work-gallery__title {
+		font-size: calc(var(--font-size) * 0.82);
+	}
+}

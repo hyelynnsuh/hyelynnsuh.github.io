@@ -82,7 +82,7 @@ function runScrollReveals() {
 		)
 	}
 
-	revealOnce('main section', 18, 0.94)
+	revealOnce('main section:not(#super-power)', 18, 0.94)
 	revealOnce('main .content-flex', 14, 0.96)
 }
 

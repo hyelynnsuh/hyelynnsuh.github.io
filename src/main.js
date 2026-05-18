@@ -7,7 +7,8 @@ import './styles/components.css'
 import './styles/motion.css'
 
 import { initMotion } from './utils/motion.js'
-import { initHomeGallery } from './homeGallery.js'
+import { initHomeWork } from './homeWork.js'
+import { initWorkGallery } from './workGallery.js'
 
 initMotion()
 
@@ -16,7 +17,8 @@ initMotion()
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-	initHomeGallery()
+	initHomeWork()
+	initWorkGallery()
 
 	const navbar = document.querySelector('.navbar')
 	if (navbar) {
@@ -33,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	const slideUpButton = document.getElementById('slideUp')
-	const targetSection = document.querySelector('.super-turn')
+	const targetSection =
+		document.getElementById('product-design') ?? document.querySelector('.super-turn:not([hidden])')
 	if (slideUpButton && targetSection) {
 		slideUpButton.addEventListener('click', () => {
 			targetSection.scrollIntoView({ behavior: 'smooth' })

@@ -1,0 +1,265 @@
+@import 'tailwindcss';
+
+/* Align with site tokens (base.css) */
+:root {
+	--neue: 'Neue Haas Grotesk Display Pro';
+}
+
+@theme {
+	--font-display: var(--neue), ui-sans-serif, system-ui, sans-serif;
+	--font-body: 'Geist', ui-sans-serif, system-ui, sans-serif;
+	--font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
+	--color-cs-canvas: #f4f4f5;
+	--color-cs-paper: #fafafa;
+	--color-cs-ink: #18181b;
+	--color-cs-muted: #71717a;
+	--color-cs-subtle: #a1a1aa;
+	--color-cs-line: #e4e4e7;
+	--color-cs-line-strong: #d4d4d8;
+	--color-cs-surface: #f4f4f5;
+	--color-cs-placeholder: #ececee;
+	--spacing-cs-section: 5.5rem;
+	--spacing-cs-section-lg: 7rem;
+}
+
+@layer base {
+	html {
+		@apply antialiased scroll-smooth;
+	}
+
+	body {
+		@apply bg-cs-canvas font-body font-normal text-cs-ink;
+	}
+
+	.cs-doc h1,
+	.cs-doc h2,
+	.cs-doc h3 {
+		@apply font-display font-medium;
+	}
+}
+
+@layer utilities {
+	.cs-container {
+		@apply mx-auto w-full max-w-[68rem] px-5 sm:px-8 lg:px-10;
+	}
+
+	.cs-grid-12 {
+		@apply grid grid-cols-4 gap-x-4 gap-y-6 sm:grid-cols-8 lg:grid-cols-12 lg:gap-x-5;
+	}
+
+	/* Display / subheaders — Neue Haas */
+	.cs-kicker {
+		@apply font-display text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-cs-muted;
+	}
+
+	.cs-label {
+		@apply font-display text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-cs-muted;
+	}
+
+	.cs-doc-title {
+		@apply font-display text-[clamp(1.375rem,2.8vw,1.875rem)] font-medium leading-[1.2] tracking-[-0.015em] text-cs-ink;
+	}
+
+	.cs-section-title {
+		@apply font-display text-[clamp(1.125rem,2.2vw,1.5rem)] font-medium leading-[1.25] tracking-[-0.01em] text-cs-ink;
+	}
+
+	.cs-pattern-title {
+		@apply max-w-[24ch] font-display text-base font-medium leading-[1.3] text-cs-ink;
+	}
+
+	.cs-subhead {
+		@apply font-display text-sm font-medium leading-[1.3] text-cs-ink;
+	}
+
+	/* Body — Geist Regular */
+	.cs-doc-lead {
+		@apply max-w-[42ch] font-body text-[0.875rem] font-normal leading-[1.65] text-cs-muted;
+	}
+
+	.cs-body {
+		@apply font-body text-[0.8125rem] font-normal leading-[1.72] text-cs-muted sm:text-[0.875rem];
+	}
+
+	.cs-spec-lead {
+		@apply max-w-[40ch] font-body text-[0.8125rem] font-normal leading-[1.68] text-cs-muted;
+	}
+
+	.cs-spec-body {
+		@apply mt-3 max-w-[40ch] font-body text-[0.8125rem] font-normal leading-[1.7] text-cs-muted;
+	}
+
+	.cs-spec-note {
+		@apply mt-5 max-w-[38ch] border-l-2 border-cs-line-strong pl-3 font-body text-[0.8125rem] font-normal leading-[1.55] text-cs-muted;
+	}
+
+	/* Meta / refs — mono */
+	.cs-pattern-index {
+		@apply mb-4 font-mono text-[0.625rem] font-medium tracking-[0.18em] text-cs-subtle;
+	}
+
+	.cs-figure-caption {
+		@apply mt-2 font-mono text-[0.625rem] leading-[1.5] text-cs-subtle;
+	}
+
+	.cs-annotation {
+		@apply inline-block border border-cs-line-strong bg-cs-paper px-1.5 py-0.5 font-mono text-[0.5625rem] font-medium uppercase tracking-[0.08em] text-cs-ink;
+	}
+
+	.cs-annotation-detail {
+		@apply font-body text-[0.5625rem] font-normal leading-[1.4] text-cs-muted;
+	}
+
+	.cs-system-tag {
+		@apply inline-block border border-cs-line bg-cs-paper px-2 py-0.5 font-body text-[0.625rem] font-normal text-cs-muted;
+	}
+
+	.cs-status {
+		@apply inline-flex items-center border border-cs-line bg-cs-paper px-2 py-0.5 font-mono text-[0.625rem] text-cs-ink;
+	}
+
+	.cs-ref {
+		@apply font-mono text-[0.625rem] text-cs-subtle;
+	}
+}
+
+/* Document shell */
+.cs-doc {
+	@apply min-h-screen font-body;
+}
+
+.cs-doc__paper {
+	@apply border-x border-cs-line bg-cs-paper shadow-[0_1px_0_rgba(0,0,0,0.04)];
+}
+
+/* Spec tables */
+.cs-spec-table {
+	@apply w-full border-collapse text-left font-body text-[0.8125rem] font-normal;
+}
+
+.cs-spec-table th,
+.cs-spec-table td {
+	@apply border border-cs-line px-3 py-2.5 align-top;
+}
+
+.cs-spec-table th {
+	@apply w-[28%] bg-cs-surface font-display text-[0.6875rem] font-medium uppercase tracking-[0.1em] text-cs-muted sm:w-[22%];
+}
+
+.cs-spec-table td {
+	@apply font-body text-cs-ink;
+}
+
+/* Artifact frames */
+.cs-artifact {
+	@apply border border-cs-line bg-cs-surface;
+}
+
+.cs-artifact__header {
+	@apply flex items-center justify-between gap-4 border-b border-cs-line px-3 py-2 text-[0.625rem] text-cs-muted;
+}
+
+.cs-artifact__header span:first-child {
+	@apply font-mono;
+}
+
+.cs-artifact__header span:last-child {
+	@apply font-body;
+}
+
+/* Principle register */
+.cs-principle-row {
+	@apply grid gap-4 border-b border-cs-line py-6 last:border-b-0 sm:grid-cols-12 sm:gap-6 sm:py-7;
+}
+
+.cs-principle-row__id {
+	@apply font-mono text-[0.625rem] text-cs-subtle sm:col-span-1;
+}
+
+.cs-principle-row__title {
+	@apply font-display text-sm font-medium text-cs-ink sm:col-span-3;
+}
+
+.cs-principle-row__body {
+	@apply font-body text-[0.8125rem] font-normal leading-[1.72] text-cs-muted sm:col-span-5 sm:text-[0.875rem];
+}
+
+.cs-principle-row__rule {
+	@apply font-body text-[0.6875rem] font-normal text-cs-muted sm:col-span-3 sm:text-right;
+}
+
+/* Constraint register */
+.cs-constraint-row {
+	@apply grid gap-2 border-b border-cs-line py-4 last:border-b-0 sm:grid-cols-12 sm:gap-6;
+}
+
+.cs-constraint-row__id {
+	@apply font-mono text-[0.625rem] text-cs-subtle sm:col-span-1;
+}
+
+.cs-constraint-row__name {
+	@apply font-display text-sm font-medium text-cs-ink sm:col-span-4;
+}
+
+.cs-constraint-row__effect {
+	@apply font-body text-[0.8125rem] font-normal leading-[1.72] text-cs-muted sm:col-span-7 sm:text-[0.875rem];
+}
+
+/* Interaction model */
+.interaction-model__intro {
+	@apply border-b border-cs-line pb-10;
+}
+
+.interaction-model__patterns {
+	@apply mt-0;
+}
+
+.interaction-pattern {
+	@apply relative py-14 sm:py-16 lg:py-20;
+}
+
+.interaction-pattern__rule {
+	@apply absolute inset-x-0 top-0 h-px bg-cs-line;
+}
+
+.interaction-pattern__grid {
+	@apply items-stretch gap-y-10 lg:gap-y-0;
+}
+
+.interaction-pattern__media {
+	@apply justify-center lg:min-h-full;
+}
+
+.interaction-pattern__spec {
+	@apply justify-center border-t border-cs-line pt-8 lg:min-h-full lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8;
+}
+
+.interaction-pattern__spec--reversed {
+	@apply lg:border-l-0 lg:border-r lg:pl-0 lg:pr-8;
+}
+
+/* Architecture diagram block */
+.cs-architecture__diagram {
+	@apply border border-cs-line bg-cs-surface;
+}
+
+.cs-architecture__point {
+	@apply border-t border-cs-line pt-5 first:border-t-0 first:pt-0;
+}
+
+.cs-architecture__point h3 {
+	@apply font-display text-sm font-medium text-cs-ink;
+}
+
+/* Doc footer nav */
+.cs-doc-nav__link {
+	@apply flex flex-col gap-1 border border-cs-line bg-cs-paper px-4 py-3 no-underline transition-colors hover:border-cs-line-strong hover:bg-cs-surface;
+}
+
+.cs-doc-nav__link:hover .cs-doc-nav__title {
+	@apply text-cs-ink;
+}
+
+.cs-doc-nav__title {
+	@apply font-display text-sm font-medium text-cs-muted;
+}

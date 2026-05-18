@@ -1,56 +1,94 @@
 # Case study sources
 
-Each published case study is generated from this folder into `projects/<slug>.html`. That keeps one shared layout (`templates/case-study.html`) while you iterate on copy and structure in `main.html`.
+Each case study is **edited as source files** here and **built** into `projects/<slug>.html` using a shared shell (`templates/case-study.html`).
 
-From the repo root, use **`npm run dev`** (Vite) for local preview; production output is **`npm run build`** → `dist/`.
+That keeps nav, footer, and head consistent while you only edit project content in `main.html`.
 
-## Layout
+## Quick start — new case study
 
-For each slug (e.g. `posty`, `depop`, `basketbuddies`):
-
-| File | Purpose |
-|------|---------|
-| `config.json` | Page title, meta description, nav bar options, copyright year |
-| `styles-after-common.fragment.html` | Page CSS after the shared entry: link `casestudy.css` + `src/styles/projects/<slug>.css` (order matters) |
-| `main.html` | **Only** the HTML that belongs **inside** `<main id="main-content">` — no `<main>` tags |
-
-## Build (no npm — Python stdlib only)
-
-From the repository root:
+From the repo root:
 
 ```bash
-python3 scripts/render_case_study.py build posty
+npm run case-study:new -- my-project "My Project"
+```
+
+This creates:
+
+| Path | Purpose |
+|------|---------|
+| `case-studies/my-project/config.json` | Title, meta, nav options |
+| `case-studies/my-project/main.html` | **All page content** (hero, sections, images) |
+| `case-studies/my-project/styles-after-common.fragment.html` | CSS links for this page |
+| `case-studies/my-project/work-item.snippet.js` | Copy-paste block for the homepage |
+| `src/styles/projects/my-project.css` | Project-specific styles |
+| `projects/my-project.html` | Built output (preview this URL) |
+
+Then:
+
+1. Edit `case-studies/my-project/main.html` — follow the section comments in the template.
+2. Add the card to `src/data/workItems.js` (use `work-item.snippet.js` as a starting point).
+3. Customize `src/styles/projects/my-project.css` for colors, vinyl label, etc.
+4. Rebuild after changes:
+
+```bash
+npm run case-study:build:one -- my-project
+# or rebuild every case study:
+npm run case-study:build
+```
+
+Preview with **`npm run dev`** → `http://localhost:5173/projects/my-project.html`
+
+## Template reference
+
+Copy and customize sections in `case-studies/_example/main.html`:
+
+| Section | Purpose |
+|---------|---------|
+| `#case-hero` | Title, role/tools/team/timeline, prototype + jump links |
+| `.depop-carousel` | Full-width cover image or carousel |
+| `#goal` | One-line project goal |
+| `#bg` | Background / context paragraph |
+| `.main-content` | Narrative — duplicate `.content-flex` per phase (research, design, `#final`, …) |
+
+Shared layout and components live in `src/styles/casestudy.css`. Per-project overrides go in `src/styles/projects/<slug>.css`.
+
+## Build commands
+
+```bash
+npm run case-study:new -- <slug> ["Optional title"]
+npm run case-study:build:one -- <slug>
+npm run case-study:build
+```
+
+Equivalent Python (no npm):
+
+```bash
+python3 scripts/render_case_study.py new my-project "My Project"
+python3 scripts/render_case_study.py build my-project
 python3 scripts/render_case_study.py build --all
 ```
 
-Outputs overwrite `projects/<slug>.html`. Run `--all` before you deploy so GitHub Pages matches your sources.
+Run **`npm run case-study:build`** before deploy so `projects/*.html` matches your sources.
 
-## New case study
+## Bootstrap from existing HTML
 
-1. Copy `_example/` to a new folder named after the slug (e.g. `case-studies/my-project/`).
-2. Add `src/styles/projects/my-project.css` (or adjust the paths in the fragment file).
-3. Fill `config.json`, edit `main.html`, adjust stylesheet links in `styles-after-common.fragment.html`.
-4. Run `python3 scripts/render_case_study.py build my-project`.
-
-## Bootstrap from an existing HTML file
-
-If you still have a hand-written `projects/<slug>.html`, you can pull out the `<main>` inner HTML once:
+If you have a hand-written `projects/<slug>.html`:
 
 ```bash
-python3 scripts/render_case_study.py extract my-project
+python3 scripts/render_case_study.py extract <slug>
 ```
 
-Then edit the generated `config.json` and `styles-after-common.fragment.html` (the script only guesses stylesheet order).
+Then edit the generated `config.json` and `styles-after-common.fragment.html`.
 
-## Config fields
+## `config.json` fields
 
 | Field | Description |
 |-------|-------------|
-| `slug` | Must match the folder name and output `projects/<slug>.html` |
+| `slug` | Must match folder name and `projects/<slug>.html` |
 | `page_title` | `<title>` |
 | `meta_description` | Meta description |
-| `nav_link_class` | Optional: e.g. `bolded-neue` — applied to all three nav links |
-| `nav_work_href` | `work` link target (default `../index.html#product-design`) |
+| `nav_link_class` | Optional, e.g. `bolded-neue` on nav links |
+| `nav_work_href` | Work link (default `../index.html#product-design`) |
 | `copyright_year` | Footer year |
 | `body_class` | Default `neue` |
-| `head_extra` | Optional extra lines before `</head>` (analytics, etc.) |
+| `head_extra` | Optional extra lines before `</head>` |

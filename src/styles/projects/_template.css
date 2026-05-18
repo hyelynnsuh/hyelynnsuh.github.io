@@ -1,0 +1,30 @@
+/* =============================================================================
+   Project-specific case study styles — copy created as <slug>.css by
+   `npm run case-study:new -- <slug> "Title"`. Shared layout: casestudy.css
+   ============================================================================= */
+
+/* Example: brand colors for this project
+:root {
+	--project-accent: #628a3d;
+}
+*/
+
+/* Example: hero meta label color
+.subtext-bold {
+	color: var(--project-accent, var(--black));
+}
+*/
+
+/* Example: custom vinyl label (delete if not using .tiny-vinyl)
+.tiny-vinyl::before {
+	content: "";
+	width: 50px;
+	height: 50px;
+	background: url("/projects/casefiles/your-logo.png") center/cover no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+*/

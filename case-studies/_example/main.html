@@ -1,9 +1,106 @@
-			<!-- Replace with your case study body (inside <main> only). -->
+			<!--
+			  Case study body template (inside <main> only — no <main> tag).
+			  Copy this folder with: npm run case-study:new -- <slug> "Project title"
+			  Sections below match shared styles in src/styles/casestudy.css.
+			-->
+
+			<!-- ——— Hero ——— -->
 			<div id="case-hero">
 				<div class="case-hero">
+					<!-- Optional: delete .tiny-table if you do not want the mini turntable -->
+					<div class="tiny-table" aria-hidden="true">
+						<div class="tiny-platter">
+							<div class="tiny-vinyl">
+								<div class="tiny-center"></div>
+							</div>
+						</div>
+					</div>
 					<div class="case-description">
 						<p>now playing...</p>
 						<h1 class="case-title bolded-neue">Project title</h1>
+						<div class="case-subtext">
+							<div class="bold-unbold">
+								<h4 class="subtext-bold subtext-left">role</h4>
+								<p class="subtext-unbold subtext-left">your role</p>
+							</div>
+							<div class="bold-unbold">
+								<h4 class="subtext-bold">tools</h4>
+								<p class="subtext-unbold">figma, etc.</p>
+							</div>
+							<div class="bold-unbold">
+								<h4 class="subtext-bold subtext-left">team</h4>
+								<p class="subtext-unbold subtext-left">team size</p>
+							</div>
+							<div class="bold-unbold">
+								<h4 class="subtext-bold">timeline</h4>
+								<p class="subtext-unbold">duration</p>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="seemore">
+					<button type="button" class="see-hifi">
+						<a class="see" href="#" target="_blank" rel="noopener noreferrer">see prototype</a>
+					</button>
+					<button type="button" class="jump-button">
+						<a class="jump" href="#final">jump to final designs</a>
+					</button>
+				</div>
 			</div>
+
+			<!-- ——— Cover / hero media ——— -->
+			<div class="depop-carousel">
+				<img src="/assets/posty-preview.png" alt="Project cover — replace image path and alt text">
+			</div>
+
+			<!-- ——— Goal statement ——— -->
+			<section id="goal">
+				<h3 class="goal">
+					one-line goal with <span class="goal-bold">emphasis</span> if needed
+				</h3>
+				<div class="crop-marks" aria-hidden="true"></div>
+			</section>
+
+			<!-- ——— Background / context ——— -->
+			<section id="bg">
+				<p class="app-bg">
+					Intro paragraph — what the project is, why it matters, and your involvement.
+				</p>
+			</section>
+
+			<!-- ——— Main narrative (duplicate .content-flex blocks per phase) ——— -->
+			<div id="scroll-progress"></div>
+			<section class="main-content">
+				<div class="content">
+					<div class="content-flex">
+						<div class="discovery">
+							<h3 class="bold problem" id="discovery">
+								section heading
+							</h3>
+							<p class="problem-desc">
+								Supporting copy for this section.
+							</p>
+						</div>
+						<div class="discovery-content">
+							<!-- Images, carousels, embeds, or card stacks go here -->
+							<img src="/assets/posty-preview.png" alt="Describe the visual">
+						</div>
+					</div>
+
+					<!-- Add more .content-flex sections: research, ideation, design, etc. -->
+
+					<div class="content-flex" id="final">
+						<div class="discovery">
+							<h3 class="bold problem">
+								final designs
+							</h3>
+							<p class="problem-desc">
+								Wrap-up for shipped work or outcomes.
+							</p>
+						</div>
+						<div class="discovery-content">
+							<img src="/assets/posty-preview.png" alt="Final design preview">
+						</div>
+					</div>
+				</div>
+			</section>

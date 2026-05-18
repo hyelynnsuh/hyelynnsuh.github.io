@@ -1,3 +1,5 @@
+@import './work-gallery.css';
+
 /* =============================================================================
    Playground page
    ============================================================================= */
@@ -18,28 +20,6 @@ section {
 	text-align: center;
 }
 
-.grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 65rem;
-	margin: auto;
-	align-items: center;
-	justify-content: center;
-	margin-top: calc(var(--margin)*3);
-}
-
-
-video, img {
-	width: 80%;
-	border-radius: calc(var(--border-radius)/1.2);
-	overflow: hidden;
-}
-
-.grid-item {
-	width: fit-content;
-}
-
-
 .highlight {
 	background-color: var(--black);
 	color: var(--white);
@@ -47,8 +27,7 @@ video, img {
 
 /* Narrow viewports — prevent fixed 65rem from forcing horizontal scroll */
 @media (max-width: 1100px) {
-	section,
-	.grid {
+	section {
 		width: 100%;
 		max-width: 100%;
 		padding-left: var(--padding);
@@ -56,13 +35,9 @@ video, img {
 		box-sizing: border-box;
 	}
 
-	.grid {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-@media (max-width: 600px) {
-	.grid {
-		grid-template-columns: 1fr;
+	#playground-gallery {
+		padding-left: var(--padding);
+		padding-right: var(--padding);
+		box-sizing: border-box;
 	}
 }
