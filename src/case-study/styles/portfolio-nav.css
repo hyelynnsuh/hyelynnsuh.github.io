@@ -1,0 +1,220 @@
+/**
+ * Portfolio navbar — scoped so site-wide base/layout/components CSS
+ * does not override case-study editorial styles.
+ */
+.portfolio-chrome {
+	--white: #fafafa;
+	--black: #2a2723;
+	--padding: 1rem;
+	--margin: 1.5rem;
+	--thin-shadow: #a7a7a78d;
+	--neue: 'Neue Haas Grotesk Display Pro';
+	font-family: var(--neue);
+}
+
+.portfolio-chrome .navbar {
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	padding-top: calc(var(--padding) / 1.4);
+	padding-bottom: calc(var(--padding) / 1.4);
+	margin-bottom: var(--margin);
+	padding-left: var(--padding);
+	background-color: var(--white);
+	top: 0;
+	z-index: 100;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid var(--thin-shadow);
+	transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-chrome .logo > img {
+	object-fit: cover;
+	width: 15%;
+	height: 25%;
+}
+
+.portfolio-chrome .logo {
+	height: 15%;
+}
+
+.portfolio-chrome .nav {
+	width: 100%;
+	position: absolute;
+	background-color: var(--black);
+	overflow: hidden;
+	max-height: 0;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+	transition: max-height 0.5s ease-out;
+}
+
+.portfolio-chrome .menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.portfolio-chrome .menu li > a {
+	cursor: pointer;
+}
+
+.portfolio-chrome .menu a {
+	display: block;
+	padding: 30px;
+	color: var(--white);
+	text-decoration: none;
+}
+
+.portfolio-chrome .menu a:hover {
+	background-color: var(--black);
+}
+
+.portfolio-chrome .hamb {
+	cursor: pointer;
+	float: right;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 44px;
+	min-height: 44px;
+	padding: var(--padding);
+	margin-right: 0.2rem;
+}
+
+.portfolio-chrome .hamb-line {
+	background: var(--black);
+	display: block;
+	height: 2px;
+	position: relative;
+	width: 20px;
+}
+
+.portfolio-chrome .hamb-line::before,
+.portfolio-chrome .hamb-line::after {
+	background: var(--black);
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	transition: all 0.2s ease-out;
+}
+
+.portfolio-chrome .hamb-line::before {
+	top: 5px;
+}
+
+.portfolio-chrome .hamb-line::after {
+	top: -5px;
+}
+
+.portfolio-chrome .side-menu {
+	display: none;
+}
+
+.portfolio-chrome .side-menu:checked ~ .nav {
+	max-height: 1000%;
+}
+
+.portfolio-chrome .side-menu:checked ~ .hamb .hamb-line {
+	background: transparent;
+}
+
+.portfolio-chrome .side-menu:checked ~ .hamb .hamb-line::before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.portfolio-chrome .side-menu:checked ~ .hamb .hamb-line::after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+.portfolio-chrome .visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.portfolio-chrome label.hamb:focus-visible {
+	outline: 2px solid var(--black);
+	outline-offset: 3px;
+}
+
+@media (min-width: 800px) {
+	.portfolio-chrome .logo > img {
+		width: 10%;
+		height: 20%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.portfolio-chrome .logo {
+		margin-left: calc(var(--margin) * 2);
+	}
+
+	.portfolio-chrome .navbar {
+		padding: calc(var(--padding) * 1.2);
+	}
+
+	.portfolio-chrome .hamb,
+	.portfolio-chrome .side-menu {
+		display: none;
+	}
+
+	.portfolio-chrome .nav {
+		all: unset;
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		justify-content: flex-end;
+		margin-right: calc(var(--margin) * 2);
+	}
+
+	.portfolio-chrome .menu {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.portfolio-chrome .menu a {
+		padding: 0;
+		color: var(--black);
+		font-weight: 500;
+		background: none;
+	}
+
+	.portfolio-chrome .menu a:hover {
+		color: var(--black);
+		opacity: 0.65;
+	}
+
+	.portfolio-chrome .menu a:focus-visible {
+		outline: 2px solid var(--black);
+		outline-offset: 3px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.portfolio-chrome .menu a:focus-visible {
+		outline: 2px solid var(--white);
+		outline-offset: 3px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.portfolio-chrome .navbar,
+	.portfolio-chrome .nav,
+	.portfolio-chrome .hamb-line::before,
+	.portfolio-chrome .hamb-line::after {
+		transition: none !important;
+	}
+}

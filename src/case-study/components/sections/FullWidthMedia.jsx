@@ -13,7 +13,7 @@ export function FullWidthMedia({
 	spacing = 'tight',
 }) {
 	return (
-		<Section spacing={spacing} className="!py-6 sm:!py-8">
+		<Section spacing={spacing} className="!py-4 sm:!py-8">
 			<Container>
 				<Reveal>
 					<figure className="cs-artifact m-0">

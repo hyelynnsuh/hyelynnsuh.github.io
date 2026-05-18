@@ -63,6 +63,18 @@ export const WORK_ITEMS = [
 		hidden: true,
 	},
 	{
+		id: 'ferra',
+		title: 'Ferra',
+		thumb: '/assets/ferra-preview.png',
+		kind: 'case-study',
+		href: '/projects/ferra.html',
+		externalTab: false,
+		category: 'product',
+		types: ['product design'],
+		description: 'interaction design for AI-mediated professional workflows',
+		hidden: true,
+	},
+	{
 		id: 'what-should-hye-lynn-eat',
 		title: 'What should Hye Lynn eat?',
 		thumb: '/assets/proj5 copy.png',

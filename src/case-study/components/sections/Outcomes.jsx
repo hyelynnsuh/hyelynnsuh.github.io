@@ -9,7 +9,7 @@ export function Outcomes({ label, title, lead, rows }) {
 			<Container>
 				<EditorialHeading label={label} title={title} lead={lead} />
 				<div className="mt-8 overflow-hidden border border-cs-line bg-cs-paper">
-					<table className="cs-spec-table">
+					<table className="cs-spec-table cs-spec-table--stacked">
 						<tbody>
 							{rows.map((row) => (
 								<tr key={row.label}>

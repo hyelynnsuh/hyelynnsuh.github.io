@@ -1,4 +1,4 @@
-import { SiteHeader } from './components/layout/SiteHeader.jsx'
+import { PortfolioNavbar } from './components/layout/PortfolioNavbar.jsx'
 import { Hero } from './components/sections/Hero.jsx'
 import { FullWidthMedia } from './components/sections/FullWidthMedia.jsx'
 import { ProjectThesis } from './components/sections/ProjectThesis.jsx'
@@ -14,14 +14,18 @@ import { dummyCaseStudy } from './data/dummyContent.js'
  * Product systems documentation page — compose sections from data.
  */
 export function CaseStudyApp({ content = dummyCaseStudy }) {
-	const { hero, media, doc } = content
+	const { hero, media } = content
 
 	return (
-		<div className="cs-doc">
-			<div className="cs-doc__paper mx-auto max-w-[68rem]">
-				<SiteHeader docType={doc?.type} docId={doc?.id ?? hero.docId} />
-				<main>
-					<Hero {...hero} docType={doc?.type} docId={doc?.id} status={doc?.status} />
+		<>
+			<a className="skip-link" href="#main-content">
+				Skip to main content
+			</a>
+			<PortfolioNavbar />
+			<div className="cs-doc">
+				<div className="cs-doc__paper mx-auto w-full min-w-0 max-w-[68rem]">
+					<main id="main-content">
+					<Hero {...hero} />
 					<FullWidthMedia
 						refId="ART-00"
 						label={media.hero}
@@ -39,9 +43,10 @@ export function CaseStudyApp({ content = dummyCaseStudy }) {
 					<ConstraintCards {...content.constraints} />
 					<SystemsThinking {...content.systemsThinking} />
 					<Outcomes {...content.outcomes} />
-				</main>
-				<ProjectNav {...content.navigation} />
+					</main>
+					<ProjectNav {...content.navigation} />
+				</div>
 			</div>
-		</div>
+		</>
 	)
 }

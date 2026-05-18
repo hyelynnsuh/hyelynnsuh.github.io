@@ -20,6 +20,7 @@ const inputs = {
   depop: resolve(__dirname, 'projects/depop.html'),
   basketbuddies: resolve(__dirname, 'projects/basketbuddies.html'),
   caseStudyTemplate: resolve(__dirname, 'projects/case-study-template.html'),
+  ferra: resolve(__dirname, 'projects/ferra.html'),
 }
 
 export default defineConfig({
@@ -27,6 +28,10 @@ export default defineConfig({
   // Use root domain (user site) or set to '/repo-name/' for project Pages.
   base: './',
   publicDir: 'public',
+  server: {
+    port: 5190,
+    strictPort: false,
+  },
   build: {
     rollupOptions: {
       input: inputs,

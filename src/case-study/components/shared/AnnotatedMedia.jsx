@@ -31,11 +31,11 @@ export function AnnotatedMedia({ label, aspect = 'landscape', caption, annotatio
 							return (
 								<li
 									key={`${item.label}-${pos}`}
-									className={`absolute flex max-w-[9rem] flex-col gap-1 sm:max-w-[10.5rem] ${posClass}`}
+									className={`absolute flex max-w-[6.5rem] flex-col gap-0.5 sm:max-w-[10.5rem] ${posClass}`}
 								>
 									<span className="cs-annotation">{item.label}</span>
 									{item.detail ? (
-										<span className="cs-annotation-detail">{item.detail}</span>
+										<span className="cs-annotation-detail hidden sm:inline">{item.detail}</span>
 									) : null}
 								</li>
 							)

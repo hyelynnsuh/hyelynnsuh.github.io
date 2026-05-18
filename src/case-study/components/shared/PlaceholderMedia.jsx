@@ -5,6 +5,7 @@ export function PlaceholderMedia({
 	label = 'Interface specimen',
 	aspect = 'video',
 	className = '',
+	showLabel = true,
 }) {
 	const aspectClass =
 		aspect === 'square'
@@ -15,17 +16,21 @@ export function PlaceholderMedia({
 					? 'aspect-[21/9]'
 					: aspect === 'landscape'
 						? 'aspect-[4/3]'
-						: 'aspect-video'
+						: aspect === 'card'
+							? 'aspect-[331/236]'
+							: 'aspect-video'
 
 	return (
 		<div
-			className={`relative flex items-center justify-center border border-cs-line bg-cs-placeholder bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-size-[12px_12px] ${aspectClass} ${className}`.trim()}
+			className={`relative flex items-center justify-center bg-cs-placeholder ${showLabel ? 'border border-cs-line bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-size-[12px_12px]' : ''} ${aspectClass} ${className}`.trim()}
 			role="img"
 			aria-label={label}
 		>
-			<span className="max-w-[16rem] border border-cs-line bg-cs-paper/90 px-3 py-2 text-center font-body text-[0.625rem] font-normal leading-relaxed text-cs-muted">
-				{label}
-			</span>
+			{showLabel ? (
+				<span className="max-w-[16rem] border border-cs-line bg-cs-paper/90 px-3 py-2 text-center font-body text-[0.625rem] font-normal leading-relaxed text-cs-muted">
+					{label}
+				</span>
+			) : null}
 		</div>
 	)
 }

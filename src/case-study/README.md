@@ -39,11 +39,23 @@ src/case-study/
 | `FullWidthMedia` | Cinematic full-width visual |
 | `ProjectThesis` | Editorial thesis + tags |
 | `InteractionModel` | Systems-doc `InteractionPatternRow` blocks (annotations, fig. captions) |
-| `InsightCards` | 3-column systems framework |
+| `InsightCards` | 3-column principle cards (image, title, tag pills) |
 | `ConstraintCards` | Tradeoff / decision grid |
 | `SystemsThinking` | Diagram + pattern list |
 | `Outcomes` | Results table |
 | `ProjectNav` | Previous / next project |
+
+### Insight card fields
+
+```js
+{
+  title: 'progressive trust',
+  tags: ['evidence → automation', 'verification → confirmation'],
+  mediaLabel: 'Optional — a11y label for placeholder / image',
+  imageSrc: '/assets/example.png', // optional — replaces gray placeholder
+  imageAlt: 'Optional alt text when imageSrc is set',
+}
+```
 
 ### Interaction model row fields
 

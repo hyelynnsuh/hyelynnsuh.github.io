@@ -1,16 +1,16 @@
 /**
- * Placeholder content — operational / systems documentation tone.
+ * Ferra case study content — replace placeholder copy as the project is documented.
  */
-export const dummyCaseStudy = {
+export const ferraCaseStudy = {
 	doc: {
-		id: 'IDD-EST-2024',
+		id: 'IDD-FERRA-2025',
 		type: 'Interaction design documentation',
-		status: 'Pilot complete',
+		status: 'In progress',
 	},
 	hero: {
-		title: 'AI estimate verification for construction estimators',
+		title: 'Ferra',
 		description:
-			'Documentation of interaction architecture, workflow integration, and human–model handoff patterns for a B2B estimating tool.',
+			'Ferra is an AI-powered estimation platform for structural steel contractors. I designed interaction systems that transformed AI outputs from opaque guesses into traceable, navigable workflows.',
 		metadata: [
 			{ label: 'Role', value: 'Lead interaction designer' },
 			{ label: 'Team', value: 'Product · Engineering · Research' },
@@ -22,19 +22,25 @@ export const dummyCaseStudy = {
 		thesis: 'Context — estimate assembly in operational tooling',
 	},
 	thesis: {
-		title: 'Trust failures are modeled as interaction failures',
-		narrative:
-			'Users did not reject AI because of brand or novelty. They rejected outputs that could not be verified against site logic, scope boundaries, or edit lineage. The design work reframed “accuracy” as an operational property of the interface — not a model metric alone.',
+		title: 'designing ai outputs that estimators could actually trust',
+		narrative: [
+			'Structural steel estimators work across fragmented drawing sets where accuracy and accountability are critical. Early AI outputs created a trust gap: users could see generated quantities, but not how the system arrived at them.',
+			'The challenge became designing an interaction model that allowed users to verify outputs quickly, maintain spatial context, and navigate uncertainty without interrupting workflow.',
+		],
 		tags: ['verification UX', 'workflow integration', 'AI mediation', 'operational tooling'],
 	},
 	interactionModel: {
 		label: '§ 02 · Interaction model',
-		title: 'Inspectable reasoning over black-box suggestions',
-		lead: 'Pattern specifications. Each entry documents behavior, system rules, and interface specimens for review.',
+		title: 'the interaction model',
+		lead: 'Structural steel estimators work across fragmented drawing sets where accuracy and accountability are critical. Early AI outputs created a trust gap: users could see generated quantities, but not how the system arrived at them.',
 		rows: [
 			{
-				title: 'Values and scale nodes',
-				body: 'Decompose outputs into discrete, inspectable units. Validation occurs at the node level before commitment to a composite estimate.',
+				title: 'column schedule maker',
+				body: [
+					'Estimators often build column schedules manually by cross-referencing scattered drawings, schedules, and detail callouts.',
+					'I designed the Column Schedule Maker as an AI-assisted workflow system that transformed fragmented drawing information into structured, editable schedules.',
+					'The interaction model focused on contextual verification, editability, and workflow flexibility. Generated schedules remained linked to source drawings and supporting evidence, allowing users to quickly inspect, refine, and validate outputs without rebuilding schedules manually.',
+				],
 				mediaLabel: 'Specimen — node hierarchy & verification states',
 				mediaCaption: 'Fig. 2.1 — Node tree with independent review gates.',
 				annotations: [
@@ -43,8 +49,11 @@ export const dummyCaseStudy = {
 				],
 			},
 			{
-				title: 'Spatial awareness & logic',
-				body: 'Spatial relationships are first-class in the UI. The system must support the same traversal sequence estimators use on site.',
+				title: 'revision aware navigation',
+				body: [
+					'Estimators constantly work across evolving drawing revisions. I introduced persistent revision states and comparison workflows inspired by existing industry behaviors.',
+					'The system surfaces drawing deltas, quantity changes, and contextual overlays while preserving navigational continuity.',
+				],
 				mediaLabel: 'Specimen — spatial annotation layer',
 				mediaCaption: 'Fig. 2.2 — Site logic mapped to coordinate space.',
 				annotations: [
@@ -66,22 +75,22 @@ export const dummyCaseStudy = {
 	},
 	insightCards: {
 		label: '§ 03 · Operating principles',
-		title: 'Framework for AI-mediated professional work',
-		lead: 'Principles applied across workflows — not campaign messaging.',
+		title: 'designing for imperfect ai',
+		lead: 'When we first started testing, the system could not rely on perfect AI accuracy. Instead of hiding uncertainty, the interaction model was designed to make system confidence legible and navigable.',
 		cards: [
 			{
-				title: 'legible seams between human and model',
-				tags: ['inference boundary → ownership', 'assertion → operator review'],
-				mediaLabel: 'Human–model seam — interface specimen',
+				title: 'progressive trust',
+				tags: ['evidence → automation', 'verification → confirmation'],
+				mediaLabel: 'Progressive trust — interface specimen',
 			},
 			{
-				title: 'correction speed over step reduction',
-				tags: ['error recovery → edit path', 'happy path → fewer steps'],
+				title: 'system visibility',
+				tags: ['processing feedback', 'contextual reasoning'],
 				mediaLabel: 'Correction speed — interface specimen',
 			},
 			{
-				title: 'feedback mutates visible system state',
-				tags: ['user correction → system update', 'logging only → rejected'],
+				title: 'human-in-the-loop',
+				tags: ['editable workflows', 'user-controlled validation'],
 				mediaLabel: 'Feedback loop — interface specimen',
 			},
 		],

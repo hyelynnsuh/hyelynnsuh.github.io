@@ -11,13 +11,13 @@ export function InteractionPatternRow({
 	mediaLabel,
 	mediaCaption,
 	annotations,
-	note,
 	reversed = false,
 }) {
+	const bodyParagraphs = Array.isArray(body) ? body : [body]
 	const indexLabel = String(index + 1).padStart(2, '0')
 
 	const mediaColumn = (
-		<div className="interaction-pattern__media lg:col-span-6">
+		<div className="interaction-pattern__media col-span-4 sm:col-span-8 lg:col-span-6">
 			<Reveal delay={index * 0.03}>
 				<AnnotatedMedia
 					label={mediaLabel}
@@ -31,7 +31,7 @@ export function InteractionPatternRow({
 
 	const specColumn = (
 		<div
-			className={`interaction-pattern__spec lg:col-span-6 ${
+			className={`interaction-pattern__spec col-span-4 sm:col-span-8 lg:col-span-6 ${
 				reversed ? 'interaction-pattern__spec--reversed' : ''
 			}`}
 		>
@@ -42,8 +42,13 @@ export function InteractionPatternRow({
 				<h3 id={`pattern-${indexLabel}`} className="cs-pattern-title">
 					{title}
 				</h3>
-				<p className="cs-spec-body">{body}</p>
-				{note ? <p className="cs-spec-note">{note}</p> : null}
+				<div className="space-y-4">
+					{bodyParagraphs.map((paragraph, i) => (
+						<p key={i} className="cs-spec-body">
+							{paragraph}
+						</p>
+					))}
+				</div>
 			</Reveal>
 		</div>
 	)

@@ -19,7 +19,7 @@ export function ConstraintCards({ label, title, lead, items }) {
 		<Section id="constraints" spacing="default">
 			<Container>
 				<EditorialHeading label={label} title={title} lead={lead} />
-				<div className="mt-10 border border-cs-line bg-cs-paper px-4 sm:px-6" role="list">
+				<div className="mt-8 border border-cs-line bg-cs-paper px-3 py-1 sm:mt-10 sm:px-6" role="list">
 					{items.map((item, index) => (
 						<ConstraintRow
 							key={item.title}

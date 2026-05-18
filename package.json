@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 5190",
+    "dev:ferra": "vite --port 5190 --open /projects/ferra.html",
     "build": "vite build",
     "preview": "vite preview",
     "case-study:new": "python3 scripts/render_case_study.py new",
